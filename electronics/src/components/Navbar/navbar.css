@@ -1,0 +1,675 @@
+.navi {
+  background-color: #3a86ff;
+}
+
+.naviLart {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0 15px 11%;
+}
+
+.naviLart>a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.naviLart>a:hover {
+  text-decoration: underline white;
+}
+
+/* <!-- NAVI --> */
+.naviPosht {
+  display: flex;
+  align-items: center;
+  padding: 0 0 7px 11%;
+  gap: 2%;
+}
+
+.responsive-row {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.responsive-row a {
+  padding-top: 16px;
+}
+
+.responsive-row img {
+  width: 100px;
+  height: 40px;
+}
+
+.navbarButoni {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 200px;
+  padding: 0 0px;
+  background-color: transparent;
+  border-radius: 7px;
+  border: 2px white solid;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.navbarButoni>i {
+  font-size: 1.2rem;
+  padding: 0 10px;
+}
+
+.navbarButoni,
+.butoniDyqani {
+  color: white;
+}
+
+.navbarKerkimi {
+  display: flex;
+  background-color: white;
+  width: 40%;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.navbarKerkimi>input,
+.navbarKerkimi>input:focus {
+  width: 100%;
+  outline: none;
+}
+
+.navbarKerkimi>button,
+.navbarKerkimi>input {
+  background-color: white;
+  border: none;
+}
+
+.zgjidhDyqanin {
+  margin: 0;
+  padding: 0;
+}
+
+.butoniDyqani {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px;
+  background-color: transparent;
+  border-radius: 7px;
+  border: 2px solid;
+  font-weight: 900;
+}
+
+.butoniDyqani>span {
+  font-weight: 200;
+  display: flex;
+  flex-direction: column;
+}
+
+.zgjidhDyqanin>p {
+  font-size: 0.8rem;
+  font-weight: 200;
+}
+
+.butonatDjathtas {
+  display: flex;
+  gap: 15px;
+}
+
+.butonatDjathtas>button,
+.butonatDjathtas>a {
+  border-radius: 100%;
+  border: none;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+  font-size: 1.4rem;
+  font-weight: 900;
+  background-color: white;
+}
+
+.butonatDjathtas>a {
+  padding: 8px 15px;
+}
+
+/* <!-- BANERI ZI --> */
+.baneri-zi {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: black;
+  padding: 12px;
+}
+
+.baneri-zi>a {
+  font-size: 0.9rem;
+  color: white;
+  text-decoration: underline white;
+}
+
+/* <!-- BANERI BLU --> */
+.baneri-blu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 90px;
+  background-color: #3a86ff;
+  align-items: anchor-center;
+  margin-bottom: 50px;
+}
+
+/* <!-- Dark Mode Toggle --> */
+
+.input {
+  visibility: hidden;
+  position: absolute;
+}
+
+.label {
+  position: absolute;
+  right: 10px;
+  width: 71px;
+  height: 30px;
+  background-color: lightgray;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.circle {
+  width: 25px;
+  background-color: white;
+  height: 25px;
+  border-radius: 50%;
+  top: 3px;
+  position: absolute;
+  left: 3px;
+  animation: toggleOff 0.4s linear forwards;
+}
+
+.input:checked+.label {
+  background-color: white;
+}
+
+.input:checked+.label .circle {
+  animation: toggleOn 0.2s linear forwards;
+  background-color: #232529;
+}
+
+@keyframes toggleOn {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(40px);
+  }
+}
+
+@keyframes toggleOff {
+  0% {
+    transform: translateX(40px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* <!-- end Dark Mode Toggle --> */
+
+.baneriBrendshem {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  padding: 20px;
+  border-radius: 0.5rem;
+  background-color: black;
+  justify-content: center;
+}
+
+.baneriBrendshem>a {
+  color: white;
+  font-weight: 600px;
+  padding: 0 10px;
+
+}
+
+.baneriBrendshem>i {
+  /* border: solid 1px white;
+  border-radius: 100%;
+  width: 25px;
+  color: white; */
+  font-size: 20px;
+  font-style: normal;
+}
+
+
+
+/* POP UP BUTONI  */
+
+.mbeshtjellsi-gjithaKategorite {
+  position: absolute;
+  overflow: hidden;
+  margin: 0;
+  width: 15%;
+  height: 94vh;
+  padding: 30px;
+  color: rgb(39, 39, 39);
+  background-color: #f4f4f4;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.listat-gjithaKategorite>h4 {
+  margin: 15px 5px;
+}
+
+.emri-lista {
+  margin: 0;
+  padding: 0;
+}
+
+.emri-lista svg {
+  width: 20px;
+  height: 20px;
+}
+
+.emri-lista>li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.emri-lista a,
+.emri-lista>li {
+  color: #1a1a1a;
+  font-weight: bold;
+  list-style: none;
+  text-decoration: none;
+  /* margin: 10px 0; */
+  padding: 7px 5px;
+  font-size: 15px;
+}
+
+.emri-lista>li:hover {
+  background-color: rgb(214, 214, 214);
+  border-radius: 5px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.gjithaKategorite-logoBtn {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gjithaKategorite-logoBtn img {
+  /* width: 90px;
+  height: 30px; */
+  width: 95%;
+}
+
+.gjithaKategorite-logoBtn button {
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  color: black;
+}
+
+.perdja-zeze {
+  width: 100%;
+  height: 975px;
+  background: #1a1a1a;
+  overflow: hidden;
+  position: absolute;
+  opacity: 80%;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.hapPopUpMbeshtjellsi {
+  visibility: visible;
+  opacity: 1;
+  background-color: #3a86ff;
+  height: auto;
+}
+
+/* bacgroundi i zi te hapja e pop up-it */
+.hapPopUpPerdja {
+  visibility: visible;
+  opacity: 1;
+  opacity: 80%;
+}
+
+.hr {
+  opacity: 90%;
+  height: 1px;
+  background-color: gold;
+}
+
+/* ------------------------ KATEGORITE BRENDA POP UP ---------------------  */
+.kategori-GlobeShops-rekomandon {
+  position: absolute;
+  width: 25%;
+  right: 55%;
+  top: 8%;
+  color: rgb(39, 39, 39);
+  border-radius: 0 10px 10px 0;
+  transition: 0.3s;
+  z-index: 1;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #f4f4f4;
+  padding: 25px 30px;
+  list-style: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.kategori-GlobeShops-rekomandon li {
+  padding: 7px 5px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.kategori-GlobeShops-rekomandon li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* ----------------------- Zgjidh DYQANI POP UP ---------------------- */
+.ZgjidhDyqanin {
+  position: absolute;
+  overflow: hidden;
+  right: 0;
+  margin: 0;
+  width: 35%;
+  height: 99vh;
+  padding: 5px 20px;
+  color: rgb(39, 39, 39);
+  background-color: #f4f4f4;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.ZgjidhDyqanin-Popup {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.ZgjidhDyqanin-Popup button {
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  color: black;
+}
+
+.ZgjidhDyqanin-input>p {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.kerko-dyqanin {
+  display: flex;
+  gap: 10px;
+}
+
+.kerko-dyqanin>button {
+  font-size: 1rem;
+  font-weight: 600;
+  width: 20%;
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+  border: none;
+}
+
+.kerko-dyqanin>input,
+.kerko-dyqanin>input:focus {
+  width: 78%;
+  height: 50px;
+  outline: none;
+  border: solid 2px black;
+  border-radius: 10px;
+}
+
+.hr-ZgjidhDyqanin {
+  margin-top: 100%;
+  color: rgb(229, 229, 229);
+}
+
+.dyqaniZgjedhur-btn {
+  font-size: 1rem;
+  font-weight: 600;
+  width: 25%;
+  padding: 19px 0;
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+  border: none;
+  float: right;
+}
+
+.hapPopUpZgjidhDyqanin {
+  visibility: visible;
+  opacity: 1;
+}
+
+.perdja-zeze-zgjidhDyqani {
+  width: 99%;
+  height: 975px;
+  background: #1a1a1a;
+  overflow: hidden;
+  position: absolute;
+  opacity: 80%;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.hapPerdja-Zeze-ZgjidhDyqanin {
+  visibility: visible;
+  opacity: 1;
+  opacity: 90%;
+}
+
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.p-faqia {
+  padding: 2rem 11%;
+}
+
+.navbarButoni>i {
+  font-size: 1.2rem;
+  padding: 0 10px;
+}
+
+
+
+.navbarKerkimi {
+  display: flex;
+  background-color: white;
+  width: 40%;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.navbarKerkimi>input,
+.navbarKerkimi>input:focus {
+  width: 100%;
+  outline: none;
+}
+
+.zgjidhDyqanin {
+  margin: 0;
+  padding: 0;
+}
+
+.zgjidhDyqanin>p {
+  font-size: 0.8rem;
+  font-weight: 200;
+}
+
+.butonatDjathtas {
+  display: flex;
+  gap: 15px;
+}
+
+.butonatDjathtas>button,
+.butonatDjathtas>a {
+  border-radius: 100%;
+  border: none;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+  font-size: 1.4rem;
+  font-weight: 900;
+  background-color: white;
+}
+
+.butonatDjathtas>a {
+  padding: 10px 15px;
+}
+
+/*         Dark mode styles          */
+body.darkmode {
+  background-color: #121212;
+  color: white;
+}
+
+body.darkmode .kartaMadhe-kutiaInfos {
+  background-color: #2c2c2c;
+  color: white;
+  border-color: #444;
+}
+
+body.darkmode .kartaMadhe-info > p {
+  color: white;
+  border-color: #888;
+}
+
+body.darkmode .kartaMadhe-infoDyte > p,
+body.darkmode .kartaMadhe-infoDyte > h4,
+body.darkmode .kartaMadhe-infoDyte > h3 {
+  color: white;
+}
+
+body.darkmode .butonat-e-kontrolluesit > button:hover {
+  background-color: #444;
+}
+
+body.darkmode .karta-vogel p {
+  color: white;
+}
+
+body.darkmode .globe-klub-baner {
+  background-color: #1a4ed6;
+  color: white;
+}
+
+body.darkmode .globe-klub-baner a {
+  color: white;
+}
+
+body.darkmode .fundi {
+  background-color: #222;
+  color: #ccc;
+}
+
+body.darkmode .fundi-rreshti h3,
+body.darkmode .fundi-rreshti a {
+  color: #ccc;
+}
+
+body.darkmode .fundi-rreshti a:hover {
+  text-decoration: underline;
+}
+
+body.darkmode .fundiDy {
+  background-color: #222;
+  color: #ccc;
+}
+
+body.darkmode .fundiDy a {
+  color: #ccc;
+}
+
+body.darkmode .fundiDy p {
+  color: #ccc;
+}
+
+body.darkmode .navbarKerkimi {
+  background-color: #444;
+}
+
+body.darkmode .navbarKerkimi>input,
+body.darkmode .navbarKerkimi>input:focus {
+  background-color: #666;
+  color: white;
+}
+
+body.darkmode .butonatDjathtas>button,
+body.darkmode .butonatDjathtas>a {
+  background-color: #444;
+  color: white;
+  border: none;
+}
+
+body.darkmode .butonatDjathtas>button:hover,
+body.darkmode .butonatDjathtas>a:hover {
+  background-color: #666;
+  color: white;
+}
+
+body.darkmode .mbeshtjellsi-gjithaKategorite {
+  background-color: #333;
+  color: white;
+}
+
+body.darkmode .kategori-GlobeShops-rekomandon {
+  background-color: #333;
+  color: white;
+}
+
+body.darkmode .ZgjidhDyqanin {
+  background-color: #333;
+  color: white;
+}
+
+body.darkmode .kerko-dyqanin>button {
+  background-color: #666;
+  color: white;
+}
+
+body.darkmode .kerko-dyqanin>input,
+body.darkmode .kerko-dyqanin>input:focus {
+  background-color: #555;
+  color: white;
+  border-color: #888;
+}
+
+body.darkmode .dyqaniZgjedhur-btn {
+  background-color: #666;
+  color: white;
+}
+
+/* <!-- END OF DARK MODE TOGGLE  --> */

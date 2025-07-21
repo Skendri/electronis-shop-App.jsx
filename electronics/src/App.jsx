@@ -3,12 +3,14 @@
 // import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from './components/Navbar/Navbar'
+import Slider from './components/FirstComponent/Slider'
 
 function App() {
 
   return (
     <>
       <Navbar/>
+      <Slider/>
     </>
   )
 }
