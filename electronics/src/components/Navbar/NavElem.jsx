@@ -1,16 +1,23 @@
-import React from 'react'
+
+import '../Navbar/navbar.css'
 import logo from '../../assets/images/amazon-logo-white.png'
+import { useState } from 'react'
+import NavPopUp from './NavPopUp'
 
 const NavElem = () => {
+
+    const [isopen, setIsOpen] = useState(false);
+
   return (
     <div>
+        <NavPopUp/>
         <div className="naviPosht" id="naviPosht">
             <div className="responsive-row">
                 <a href="">
                     <img src={logo} alt="logo-image"/>
                 </a>
                 
-                <button className="navbarButoni" onclick='{hapPopUp()}'>
+                <button className="navbarButoni" onClick={handleClick}>
                     <i className="fa-solid fa-bars"></i>
                     {/* <i className="ph ph-list"></i>  */}
                     <p> Te gjithe katergorite </p>
@@ -38,9 +45,38 @@ const NavElem = () => {
         </div>
     </div>
   )
+  
+//   function hapPopUp(){
+//         if(isopen === false){
+//             setIsOpen(true);
+//             setIsOpen(".hapPopUpZgjidhDyqanin");
+//             setIsOpen(".hapPerdja-Zeze-ZgjidhDyqanin");
+//             console.log("hapet");
+//         } else {
+//             setIsOpen(false);
+//             setIsOpen(".hapPopUpZgjidhDyqanin");
+//             setIsOpen(".hapPerdja-Zeze-ZgjidhDyqanin");
+//             console.log("mbyllet");
+//         };
+//     }
+
+    function handleClick(){
+        if(!isopen){
+            setIsOpen();
+            console.log("butoni u klikua nga useri", Boolean(isopen));
+        } else {
+            setIsOpen(false);
+            console.log("butoni u klikua nga useri", Boolean(isopen));
+        }
+    }
 }
 
 // hapPopUp()
+
+
+
+
+
 
 
 export default NavElem

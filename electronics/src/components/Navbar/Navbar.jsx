@@ -3,6 +3,7 @@ import './navbar.css'
 import Linktop from './Linktop'
 import NavElem from './NavElem'
 import NavPopUp from './NavPopUp'
+// import { hapPopUp} from './NavElem'
 
 const Navbar = () => {
   return (

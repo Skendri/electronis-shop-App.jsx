@@ -1,6 +1,7 @@
 
-import React from 'react'
+// import '../Navbar/navbar.css'
 import logo from '../../assets/images/amazon-logo-white.png'
+
 const NavPopUp = () => {
   return (
     <div>
@@ -20,7 +21,7 @@ const NavPopUp = () => {
       <div id="mbeshtjellsi-gjithaKategorite" className="mbeshtjellsi-gjithaKategorite">
         <div className="listat-gjithaKategorite">
           <div className="gjithaKategorite-logoBtn">
-            <img src={logo} alt="lgog"/>
+            <img src={logo} alt="logo"/>
             <button onclick='{hapPopUp()}'><i className="ph ph-x"></i></button>
           </div>
         
