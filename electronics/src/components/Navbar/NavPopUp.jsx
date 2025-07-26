@@ -1,8 +1,8 @@
 
-// import '../Navbar/navbar.css'
+import '../Navbar/navbar.css'
 import logo from '../../assets/images/amazon-logo-white.png'
 
-const NavPopUp = () => {
+const NavPopUp = ({isopen}) => {
   return (
     <div>
          <ul className='kategori-GlobeShops-rekomandon' id="kategori-GlobeShops-rekomandonPopUp">
@@ -18,11 +18,11 @@ const NavPopUp = () => {
       <li>Audio, kufje dhe navigatorë</li>
     </ul>
     
-      <div id="mbeshtjellsi-gjithaKategorite" className="mbeshtjellsi-gjithaKategorite">
+      <div id="mbeshtjellsi-gjithaKategorite" className={isopen ? "hapPopUpMbeshtjellsi hapPopUpPerdja" : "mbeshtjellsi-gjithaKategorite"}>
         <div className="listat-gjithaKategorite">
           <div className="gjithaKategorite-logoBtn">
             <img src={logo} alt="logo"/>
-            <button onclick='{hapPopUp()}'><i className="ph ph-x"></i></button>
+            <button onClick='{hapPopUp()}'><i className="ph ph-x"></i></button>
           </div>
         
           <hr className="hr"/>

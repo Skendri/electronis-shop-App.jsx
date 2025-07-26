@@ -1,23 +1,21 @@
 
 import '../Navbar/navbar.css'
 import logo from '../../assets/images/amazon-logo-white.png'
-import { useState } from 'react'
-import NavPopUp from './NavPopUp'
+// import NavPopUp from './NavPopUp'
 
-const NavElem = () => {
+const NavElem = ({click}) => {
 
-    const [isopen, setIsOpen] = useState(false);
 
   return (
     <div>
-        <NavPopUp/>
+        {/* <NavPopUp/> */}
         <div className="naviPosht" id="naviPosht">
             <div className="responsive-row">
                 <a href="">
                     <img src={logo} alt="logo-image"/>
                 </a>
                 
-                <button className="navbarButoni" onClick={handleClick}>
+                <button className="navbarButoni" onClick={click}>
                     <i className="fa-solid fa-bars"></i>
                     {/* <i className="ph ph-list"></i>  */}
                     <p> Te gjithe katergorite </p>
@@ -30,7 +28,7 @@ const NavElem = () => {
             </div>
             
             <div className="zgjidhDyqanin">
-                <button  className="butoniDyqani" onclick='{hapPopUpDyqani()}'>
+                <button  className="butoniDyqani" onClick='{hapPopUpDyqani()}'>
                     <span> Zgjidhni Dyqanin <br/>
                      Fut koding postar ose
                     </span>
@@ -60,15 +58,15 @@ const NavElem = () => {
 //         };
 //     }
 
-    function handleClick(){
-        if(!isopen){
-            setIsOpen();
-            console.log("butoni u klikua nga useri", Boolean(isopen));
-        } else {
-            setIsOpen(false);
-            console.log("butoni u klikua nga useri", Boolean(isopen));
-        }
-    }
+    // function handleClick(){
+    //     if(!isopen){
+    //         setIsOpen(<NavPopUp/>);
+    //         console.log("butoni u klikua nga useri", Boolean(isopen));
+    //     } else {
+    //         setIsOpen(false);
+    //         console.log("butoni u klikua nga useri", Boolean(isopen));
+    //     }
+    // }
 }
 
 // hapPopUp()

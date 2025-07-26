@@ -3,19 +3,29 @@ import './navbar.css'
 import Linktop from './Linktop'
 import NavElem from './NavElem'
 import NavPopUp from './NavPopUp'
+import { useState } from 'react' // IGNORE: This import is necessary for state management in NavElem.jsx
 // import { hapPopUp} from './NavElem'
 
 const Navbar = () => {
+
+      const [isopen, setIsOpen] = useState(false);
+      console.log(isopen);
+
+      function handleClick() {
+        setIsOpen(!isopen);
+        console.log("handle click funksionon per mrekulli");
+      }
+
   return (
   <>
-  <div id="perdja-zeze-zgjidhDyqani" className="perdja-zeze-zgjidhDyqani" onclick= '{hapPopUpDyqani()}'></div>
+  <div id="perdja-zeze-zgjidhDyqani" className="perdja-zeze-zgjidhDyqani" onClick= '{hapPopUpDyqani()}'></div>
   
   {/* <div id="mbeshtjellsi-gjithaKategorite" className="mbeshtjellsi-gjithaKategorite"> */}
     <div className="ZgjidhDyqanin" id="ZgjidhDyqanin">
       
       <div className="ZgjidhDyqanin-Popup">
         <p>Zgjidhni dyqanin</p>
-        <button onclick='{hapPopUpDyqani()}'><i className="ph ph-x"></i></button>
+        <button onClick='{hapPopUpDyqani()}'><i className="ph ph-x"></i></button>
       </div>
       
       <div className="ZgjidhDyqanin-input">
@@ -34,20 +44,16 @@ const Navbar = () => {
     {/* </div> */}
     
     {/*                   pop upi i linqeve te mouse leave                */}
-    <div id="perdja-zeze" className="perdja-zeze" onclick= '{hapPopUp()}'></div>
+    <div id="perdja-zeze" className="perdja-zeze" onClick= '{hapPopUp()}'></div>
     
-   <NavPopUp/>
+   <NavPopUp isopen = {isopen}/>
 
-   {/*           menu anash full link      */}
-  
+    {/*        ketu nis komplet navbari              */}
   <div className="navi">
-     {/*              Big Nav                 */}
 
     <Linktop/>
-    {/*              listat e nav       */}
 
-    <NavElem/>
-    {/*              navi poshte       */}
+    <NavElem click={handleClick}/>
     
     <div className="baneri-zi">
       <a href="">Shkarkoni APP-in</a>
@@ -62,7 +68,7 @@ const Navbar = () => {
       </div>
        {/*       toggle dark mode        */}
       <input type="checkbox" id="dark-mode" className="input"/>
-      <label for="dark-mode" className="label">
+      <label htmlFor="dark-mode" className="label">
         <div className="circle"></div>
       </label>
       {/*  end of toggle dark mode  */}

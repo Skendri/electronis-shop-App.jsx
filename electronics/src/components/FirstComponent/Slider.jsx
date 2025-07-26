@@ -228,9 +228,9 @@ const Slider = () => {
         </div>
       </section>
       {/* butonat e kontrrollit te sliderit */}
-      <section id="butonat-e-kontrolluesit" class="butonat-e-kontrolluesit">
-        <button id="majtas"> <i class="fa-solid fa-chevron-left"></i> </button>
-        <button id="djathtas"> <i class="fa-solid fa-chevron-right"></i> </button>
+      <section id="butonat-e-kontrolluesit" className="butonat-e-kontrolluesit">
+        <button id="majtas"> <i className="fa-solid fa-chevron-left"></i> </button>
+        <button id="djathtas"> <i className="fa-solid fa-chevron-right"></i> </button>
       </section>
     </div>
   )
