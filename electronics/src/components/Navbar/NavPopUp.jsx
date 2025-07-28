@@ -1,5 +1,5 @@
 
-import '../Navbar/navbar.css'
+
 import logo from '../../assets/images/amazon-logo-white.png'
 
 const NavPopUp = ({isopen}) => {
@@ -15,10 +15,10 @@ const NavPopUp = ({isopen}) => {
       <li>Pajisje të mëdha</li>
       <li>Pajisje të vogla dhe kafe</li>
       <li>Kujdesi Personal</li>
-      <li>Audio, kufje dhe navigatorë</li>
+      <li>Audio, kufje dhe navigatorë</li> 
     </ul>
     
-      <div id="mbeshtjellsi-gjithaKategorite" className={isopen ? "hapPopUpMbeshtjellsi hapPopUpPerdja" : "mbeshtjellsi-gjithaKategorite"}>
+      <div id="mbeshtjellsi-gjithaKategorite" className={!isopen ? " " : " " }>
         <div className="listat-gjithaKategorite">
           <div className="gjithaKategorite-logoBtn">
             <img src={logo} alt="logo"/>

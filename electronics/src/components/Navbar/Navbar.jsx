@@ -18,14 +18,14 @@ const Navbar = () => {
 
   return (
   <>
-  <div id="perdja-zeze-zgjidhDyqani" className="perdja-zeze-zgjidhDyqani" onClick= '{hapPopUpDyqani()}'></div>
+  <div id="perdja-zeze-zgjidhDyqani" className="perdja-zeze-zgjidhDyqani" onClick= {handleClick}></div>
   
-  {/* <div id="mbeshtjellsi-gjithaKategorite" className="mbeshtjellsi-gjithaKategorite"> */}
+  {/* <div id="mbeshtjellsi-gjithaKategorite" className="mbeshtjellsi-gjithaKategorite"/> */}
     <div className="ZgjidhDyqanin" id="ZgjidhDyqanin">
       
       <div className="ZgjidhDyqanin-Popup">
         <p>Zgjidhni dyqanin</p>
-        <button onClick='{hapPopUpDyqani()}'><i className="ph ph-x"></i></button>
+        <button onClick= {handleClick}><i className="ph ph-x"></i></button>
       </div>
       
       <div className="ZgjidhDyqanin-input">

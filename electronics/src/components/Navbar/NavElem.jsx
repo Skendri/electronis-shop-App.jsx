@@ -1,14 +1,12 @@
 
 import '../Navbar/navbar.css'
 import logo from '../../assets/images/amazon-logo-white.png'
-// import NavPopUp from './NavPopUp'
 
 const NavElem = ({click}) => {
 
 
   return (
     <div>
-        {/* <NavPopUp/> */}
         <div className="naviPosht" id="naviPosht">
             <div className="responsive-row">
                 <a href="">
@@ -44,32 +42,8 @@ const NavElem = ({click}) => {
     </div>
   )
   
-//   function hapPopUp(){
-//         if(isopen === false){
-//             setIsOpen(true);
-//             setIsOpen(".hapPopUpZgjidhDyqanin");
-//             setIsOpen(".hapPerdja-Zeze-ZgjidhDyqanin");
-//             console.log("hapet");
-//         } else {
-//             setIsOpen(false);
-//             setIsOpen(".hapPopUpZgjidhDyqanin");
-//             setIsOpen(".hapPerdja-Zeze-ZgjidhDyqanin");
-//             console.log("mbyllet");
-//         };
-//     }
-
-    // function handleClick(){
-    //     if(!isopen){
-    //         setIsOpen(<NavPopUp/>);
-    //         console.log("butoni u klikua nga useri", Boolean(isopen));
-    //     } else {
-    //         setIsOpen(false);
-    //         console.log("butoni u klikua nga useri", Boolean(isopen));
-    //     }
-    // }
 }
 
-// hapPopUp()
 
 
 
