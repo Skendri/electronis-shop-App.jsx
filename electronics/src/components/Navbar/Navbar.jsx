@@ -6,34 +6,35 @@ import NavPopUp from './NavPopUp'
 import { useState } from 'react' // IGNORE: This import is necessary for state management in NavElem.jsx
 // import { hapPopUp} from './NavElem'
 
+
 const Navbar = () => {
-
-      const [isopen, setIsOpen] = useState(false);
-      console.log(isopen);
-
-      function handleClick() {
-        setIsOpen(!isopen);
-        console.log("handle click funksionon per mrekulli");
-      }
-
+  
+  const [isopen, setIsOpen] = useState(false);
+  console.log(isopen);
+  
+  function handleClick() {
+    setIsOpen(!isopen);
+    console.log("handle click funksionon per mrekulli");
+  }
+  
   return (
   <>
-  <div id="perdja-zeze-zgjidhDyqani" className="perdja-zeze-zgjidhDyqani" onClick= {handleClick}></div>
   
-  {/* <div id="mbeshtjellsi-gjithaKategorite" className="mbeshtjellsi-gjithaKategorite"/> */}
-    <div className="ZgjidhDyqanin" id="ZgjidhDyqanin">
-      
-      <div className="ZgjidhDyqanin-Popup">
-        <p>Zgjidhni dyqanin</p>
-        <button onClick= {handleClick}><i className="ph ph-x"></i></button>
-      </div>
-      
-      <div className="ZgjidhDyqanin-input">
-        <p>Fut kodin postar ose qytetin për të parë dyqanet pranë teje. Në këtë mënyrë do të mund të kontrolloni disponueshmërinë e produkteve në dyqan.</p>
-        
-        <div className="kerko-dyqanin">
-          <input type="text" placeholder='Kerkoni sipas kodit postar ose qytetit'/>
-          <button> Kerko<i/> </button>
+  <div id="perdja-zeze-zgjidhDyqani" className="perdja-zeze-zgjidhDyqani" ></div>
+  
+   {/* <div id="mbeshtjellsi-gjithaKategorite" className="mbeshtjellsi-gjithaKategorite"/> */}
+  
+  <div className="ZgjidhDyqanin" id="ZgjidhDyqanin">
+    <div className="ZgjidhDyqanin-Popup">
+      <p>Zgjidhni dyqanin</p>
+      <button onClick= {handleClick}><i className="ph ph-x"></i></button>
+    </div>
+    
+    <div className="ZgjidhDyqanin-input">
+      <p>Fut kodin postar ose qytetin për të parë dyqanet pranë teje. Në këtë mënyrë do të mund të kontrolloni disponueshmërinë e produkteve në dyqan.</p>
+      <div className="kerko-dyqanin">
+        <input type="text" placeholder='Kerkoni sipas kodit postar ose qytetit'/>
+        <button> Kerko<i/> </button>
         </div>
         
         <hr className="hr-ZgjidhDyqanin"/>
@@ -41,15 +42,17 @@ const Navbar = () => {
         <button className="dyqaniZgjedhur-btn">Zgjidhni dyqanin</button>
       </div>
     </div>
+    
     {/* </div> */}
     
     {/*                   pop upi i linqeve te mouse leave                */}
     <div id="perdja-zeze" className="perdja-zeze" onClick= '{hapPopUp()}'></div>
     
-   <NavPopUp isopen = {isopen}/>
+  
 
     {/*        ketu nis komplet navbari              */}
   <div className="navi">
+     <NavPopUp isopen = {isopen}/>
 
     <Linktop/>
 

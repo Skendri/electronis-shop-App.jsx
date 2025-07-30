@@ -1,5 +1,5 @@
 
-import '../Navbar/navbar.css'
+// import '../Navbar/navbar.css'
 import logo from '../../assets/images/amazon-logo-white.png'
 
 const NavElem = ({click}) => {
