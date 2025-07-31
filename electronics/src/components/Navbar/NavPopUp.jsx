@@ -18,7 +18,7 @@ const NavPopUp = ({isopen}) => {
       <li>Audio, kufje dhe navigatorë</li> 
     </ul>
     
-      <div id="mbeshtjellsi-gjithaKategorite" className={`mbeshtjellsi-gjithaKategorite ${isopen ? 'hapPopUpMbeshtjellsi' : ''}`}>
+      <div id="mbeshtjellsi-gjithaKategorite" className={`mbeshtjellsi-gjithaKategorite ${isopen ? 'hapPopUpMbeshtjellsi ' : ' '}`}>
         <div className="listat-gjithaKategorite">
           <div className="gjithaKategorite-logoBtn">
             <img src={logo} alt="logo"/>

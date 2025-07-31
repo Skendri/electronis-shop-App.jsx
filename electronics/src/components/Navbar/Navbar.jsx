@@ -4,30 +4,37 @@ import Linktop from './Linktop'
 import NavElem from './NavElem'
 import NavPopUp from './NavPopUp'
 import { useState } from 'react' // IGNORE: This import is necessary for state management in NavElem.jsx
-// import { hapPopUp} from './NavElem'
 
 
 const Navbar = () => {
   
   const [isopen, setIsOpen] = useState(false);
   console.log(isopen);
+
+  const [butoniDyqani, setButoniDyqani] = useState(false);
+  console.log(butoniDyqani);
   
   function handleClick() {
     setIsOpen(!isopen);
     console.log("handle click funksionon per mrekulli");
   }
+
+  function handleLick() {
+    setButoniDyqani(!butoniDyqani);
+    console.log("handle lick funksionon per mrekulli");
+  }
   
   return (
   <>
   
-  <div id="perdja-zeze-zgjidhDyqani" className="perdja-zeze-zgjidhDyqani" ></div>
+  <div id="perdja-zeze-zgjidhDyqani" className={`perdja-zeze-zgjidhDyqani ${butoniDyqani ? "hapPerdja-Zeze-ZgjidhDyqanin " : " perdja-zeze-zgjidhDyqani"} `} onClick={handleLick}></div>
   
    {/* <div id="mbeshtjellsi-gjithaKategorite" className="mbeshtjellsi-gjithaKategorite"/> */}
   
-  <div className="ZgjidhDyqanin" id="ZgjidhDyqanin">
+  <div className={`ZgjidhDyqanin ${butoniDyqani ? "ZgjidhDyqanin-Popup" : " "}`} id="ZgjidhDyqanin">
     <div className="ZgjidhDyqanin-Popup">
       <p>Zgjidhni dyqanin</p>
-      <button onClick= {handleClick}><i className="ph ph-x"></i></button>
+      <button onClick={""}><i className="ph ph-x"></i></button>
     </div>
     
     <div className="ZgjidhDyqanin-input">
@@ -45,14 +52,14 @@ const Navbar = () => {
     
     {/* </div> */}
     
-    {/*                   pop upi i linqeve te mouse leave                */}
-    <div id="perdja-zeze" className="perdja-zeze" onClick= '{hapPopUp()}'></div>
+    {/*                   divi i perdes se zeze te popUpi              */}
+    <div id="perdja-zeze" className={`perdja-zeze ${isopen ? "hapPopUpPerdja" : " perdja-zeze"} `} onClick={handleClick}></div>
     
   
 
     {/*        ketu nis komplet navbari              */}
   <div className="navi">
-     <NavPopUp isopen = {isopen}/>
+     <NavPopUp isopen = {isopen} />
 
     <Linktop/>
 
