@@ -1,7 +1,7 @@
 
 import logo from '../../assets/images/amazon-logo-white.png'
 
-const NavElem = ({click, handleLick}) => {
+const NavElem = ({click, clikButoni}) => {
 
 
   return (
@@ -25,7 +25,7 @@ const NavElem = ({click, handleLick}) => {
             </div>
             
             <div className="zgjidhDyqanin">
-                <button  className="butoniDyqani" onClick={handleLick}>
+                <button  className="butoniDyqani" onClick={clikButoni}>
                     <span> Zgjidhni Dyqanin <br/>
                      Fut koding postar ose
                     </span>
