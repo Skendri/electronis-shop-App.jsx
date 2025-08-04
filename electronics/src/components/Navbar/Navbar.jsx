@@ -35,7 +35,7 @@ const Navbar = () => {
  <PopUpDyqani butoniDyqani={butoniDyqani}/>
     
     
-    {/*                   divi i perdes se zeze te popUpi              */}
+    {/*                   divi i perdes se zeze te popUpi te gjitha kategorite              */}
     <div id="perdja-zeze" className={`perdja-zeze ${isopen ? "hapPopUpPerdja" : " perdja-zeze"} `} onClick={handleClick}></div>
     
   

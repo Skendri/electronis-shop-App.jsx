@@ -5,7 +5,7 @@
 .naviLart {
   display: flex;
   gap: 10px;
-  padding: 10px 0 15px 11%;
+  padding: 10px 11% 10px 11%;
 }
 
 .naviLart>a {
@@ -253,7 +253,6 @@
   overflow: hidden;
   margin: 0;
   width: 15%;
-  height: 94vh;
   padding: 30px;
   color: rgb(39, 39, 39);
   background-color: #f4f4f4;
@@ -339,6 +338,7 @@
   opacity: 1;
   background-color: #3a86ff;
   height: auto;
+  height: 94vh;
 }
 
 /* bacgroundi i zi te hapja e pop up-it */
