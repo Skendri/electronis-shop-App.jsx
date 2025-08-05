@@ -10,20 +10,19 @@ import { useState } from 'react' // IGNORE: This import is necessary for state m
 const Navbar = () => {
   
   const [isopen, setIsOpen] = useState(false);
-  console.log(isopen);
 
-  const [butoniDyqani, setButoniDyqani] = useState(false);
-  console.log(butoniDyqani);
-  
   function handleClick() {
     setIsOpen(!isopen);
-    console.log("handle click funksionon per mrekulli");
   }
 
+  const [butoniDyqani, setButoniDyqani] = useState(false);
+  
   function handleClick2() {
     setButoniDyqani(!butoniDyqani);
-    console.log("handle lick funksionon per mrekulli");
   }
+
+
+   
   
   return (
   <>
