@@ -22,9 +22,7 @@ const NavPopUp = ({isopen}) => {
         id="kategori-GlobeShops-rekomandonPopUp"
         style={{
           display: hoveredItem !== null ? 'block' : 'none',
-          boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-          // visibility: isopen ? 'visible' : 'hidden',
-          // opacity: isopen ? 1 : 0,
+          boxShadow: '2px 2px 30px rgba(202, 200, 200, 1)',
           transition: 'opacity 0.3s ease-in-out'
         }}
       >

@@ -359,15 +359,15 @@
   position: absolute;
   width: 25%;
   right: 55%;
-  top: 8%;
+  top: 10%;
   color: rgb(39, 39, 39);
   border-radius: 0 10px 10px 0;
-  transition: 0.3s;
+  /* transition: 0.3s; */
   z-index: 1;
   font-size: 1rem;
   font-weight: 600;
   background: #f4f4f4;
-  padding: 25px 30px;
+  padding: 25px 33px;
   list-style: none;
 }
 
