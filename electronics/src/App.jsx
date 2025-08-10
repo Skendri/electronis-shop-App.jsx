@@ -4,13 +4,15 @@
 import './App.css'
 import Navbar from './components/Navbar/Navbar'
 import Slider from './components/FirstComponent/Slider'
+import KartaMadheSlider from './components/SecondComponent/KartaMadheSlider'
 
 function App() {
 
   return (
     <>
-      <Navbar/>
-      <Slider/>
+      <Navbar />
+      <Slider />
+      <KartaMadheSlider />
     </>
   )
 }
