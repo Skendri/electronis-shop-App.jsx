@@ -5,6 +5,7 @@ import './App.css'
 import Navbar from './components/Navbar/Navbar'
 import Slider from './components/FirstComponent/Slider'
 import KartaMadheSlider from './components/SecondComponent/KartaMadheSlider'
+import SliderProduct from './components/ThirdComponent/SliderProduct'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <Navbar />
       <Slider />
       <KartaMadheSlider />
+      <SliderProduct />
     </>
   )
 }

@@ -1,0 +1,112 @@
+/* <!-- KARTA MADHE --> */
+.mbeshtjellesi-kartave,
+.seksioni-plani-pare {
+  padding: 0 7%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  /* scrollbar-width: 0; */
+}
+
+.mbeshtjellesi-kartave::-webkit-scrollbar,
+.seksioni-plani-pare::-webkit-scrollbar {
+  display: none;
+}
+
+.plani-pare {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.plani-pare > p {
+  font-size: 1.6rem;
+  font-weight: 600;
+  width: 100%;
+}
+
+.plani-pare > .butonat-e-kontrolluesit {
+  text-align: end;
+  display: flex;
+  gap: 4px;
+}
+
+.kartat-plani-pare {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 5) - 1%);
+  align-items: center;
+  gap: 20px;
+  overflow: hidden;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  scroll-snap-align: start;
+}
+
+.karta-plan-pare {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  border: inset 8px rgb(58 134 255);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  overflow-x: hidden;
+  scroll-snap-align: start;
+  padding: 0 6%;
+}
+
+.plani-pare-siper > h4 {
+  display: inline-block;
+  padding: 5px;
+  font-size: 0.9rem;
+  border-radius: 20px;
+  border: red solid 1px;
+}
+
+.plani-pare-siper > img {
+  width: 250px;
+  height: 250px;
+}
+
+.plani-pare-siper p {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.reviews {
+  display: flex;
+  padding: 0;
+  align-items: center;
+}
+
+.reviews p {
+  margin: 0 10px;
+  color: gray;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.reviews > img {
+  width: 100px;
+  height: 20px;
+}
+
+.plani-pare-posht {
+  font-size: 0.9rem;
+}
+
+.plani-pare-posht span {
+  font-size: 1.4rem;
+  color: rgb(228, 0, 0);
+  font-weight: 600;
+}
+
+.plani-pare-posht a,
+.plani-pare-posht:last-child {
+  margin: 0;
+  font-size: 0.8rem;
+  color: rgb(73, 73, 73);
+}
