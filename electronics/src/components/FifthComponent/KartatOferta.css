@@ -108,3 +108,22 @@
   font-size: 1.6rem;
   font-style: oblique;
 }
+
+/*        buttonat         */
+
+.butonat-e-kontrolluesit {
+  text-align: end;
+  padding: 20px 0;
+  margin-right: 50px;
+}
+
+.butonat-e-kontrolluesit > button {
+  padding: 8px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.butonat-e-kontrolluesit > button:hover {
+  background-color: #616161;
+}

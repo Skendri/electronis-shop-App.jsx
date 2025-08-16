@@ -241,6 +241,7 @@ function SliderProduct() {
           <ProductCard key={`${product.id}-${i}`} product={product} />
         ))}
       </div>
+      
     </section>
   );
 }

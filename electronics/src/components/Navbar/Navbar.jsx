@@ -21,7 +21,6 @@ const Navbar = () => {
     setButoniDyqani(!butoniDyqani);
   }
 
-
    
   
   return (
