@@ -17,7 +17,8 @@ const KartaMadheSlider = () => {
       header1: "PSE TE ZGJIDHNI SAMSUNG AI PER SHTEPIN TUAJ?",
       header2: "PERFITO 10'000 LEKE ULJE!!",
       paragrafi3: "Per cdo blerje Samsung Galaxy Z FOLD6/ Z FLIP6 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis quos eum voluptatum molestias delectus",
-      paragrafi4: "Zgjidhni nga 12 deri ne 48 keste"
+      paragrafi4: "Zgjidhni nga 12 deri ne 48 keste",
+      img: "https://cms-images.mmst.eu/hzxov1nxpus5/1by1aTp4QJe7wvefpLJmRZ/21beef08ce8d290864871d4030a85671/MediaMarkt_Business__1_.jpg?q=70&fm=webp&w=730&h=410"
     },
     {
       paragrafi1: "Ne dyqan dhe online",
@@ -25,7 +26,8 @@ const KartaMadheSlider = () => {
       header1: "PSE TE ZGJIDHNI SAMSUNG AI PER SHTEPIN TUAJ?",
       header2: "PERFITO 22'000 LEKE ULJE!!",
       paragrafi3: "Per cdo blerje Samsung Galaxy Z FOLD6/ Z FLIP6 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis quos eum voluptatum molestias delectus",
-      paragrafi4: "Zgjidhni nga 12 deri ne 48 keste"
+      paragrafi4: "Zgjidhni nga 12 deri ne 48 keste",
+      img: "https://cms-images.mmst.eu/hzxov1nxpus5/1by1aTp4QJe7wvefpLJmRZ/21beef08ce8d290864871d4030a85671/MediaMarkt_Business__1_.jpg?q=70&fm=webp&w=730&h=410"
     },
     {
       paragrafi1: "Ne dyqan dhe online",
@@ -33,7 +35,8 @@ const KartaMadheSlider = () => {
       header1: "PSE TE ZGJIDHNI SAMSUNG AI PER SHTEPIN TUAJ?",
       header2: "PERFITO 30'000 LEKE ULJE!!",
       paragrafi3: "Per cdo blerje Samsung Galaxy Z FOLD6/ Z FLIP6 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis quos eum voluptatum molestias delectus",
-      paragrafi4: "Zgjidhni nga 12 deri ne 48 keste"
+      paragrafi4: "Zgjidhni nga 12 deri ne 48 keste",
+      img: "https://cms-images.mmst.eu/hzxov1nxpus5/1by1aTp4QJe7wvefpLJmRZ/21beef08ce8d290864871d4030a85671/MediaMarkt_Business__1_.jpg?q=70&fm=webp&w=730&h=410"
     }
   ];
 
@@ -76,6 +79,7 @@ const KartaMadheSlider = () => {
               header2={card.header2}
               paragrafi3={card.paragrafi3}
               paragrafi4={card.paragrafi4}
+              img={card.img}
             />
           ))}
         </div>
@@ -94,7 +98,7 @@ const KartaMadheSlider = () => {
   );
 };
 
-function Kartat({paragrafi1, paragrafi2, header1, header2, paragrafi3, paragrafi4}) {
+function Kartat({paragrafi1, paragrafi2, header1, header2, paragrafi3, paragrafi4, img}) {
   return (
     <div id="kartaMadheID" className="kartaMadhe">
       <div className="kartaMadhe-kutiaInfos kartaGjere-kutia">
@@ -116,7 +120,7 @@ function Kartat({paragrafi1, paragrafi2, header1, header2, paragrafi3, paragrafi
 
       <div className="kartaMadhe-foto kartaGjere-foto">
         <img
-          src="https://cms-images.mmst.eu/hzxov1nxpus5/1by1aTp4QJe7wvefpLJmRZ/21beef08ce8d290864871d4030a85671/MediaMarkt_Business__1_.jpg?q=70&fm=webp&w=730&h=410"
+          src={img}
           alt=""
           draggable="false"
         />
