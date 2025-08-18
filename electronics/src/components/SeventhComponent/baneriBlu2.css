@@ -1,0 +1,20 @@
+.globe-klub-baner {
+  color: white;
+  padding: 40px 11%;
+  margin-top: 2rem;
+  background-color: #3a86ff;
+}
+
+.globe-klub-baner h4 {
+  font-size: 1.7rem;
+  font-weight: 900;
+  font-style: italic;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.globe-klub-baner a {
+  color: white;
+  padding: 20px 0;
+  font-weight: 600;
+}

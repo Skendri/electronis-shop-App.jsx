@@ -6,6 +6,9 @@ import KartaMadheSlider from './components/SecondComponent/KartaMadheSlider'
 import SliderProduct from './components/ThirdComponent/SliderProduct'
 import BaneriMadh from './components/FourthComponent/BaneriMadh'
 import KartatOferta from './components/FifthComponent/KartatOferta'
+import GlobeSector from './components/sixthCopmonent/GlobeSector'
+import BaneriBlu2 from './components/SeventhComponent/baneriBlu2'
+import ProductCard from './components/EightthComponent/ProductCard'
 
 function App() {
 
@@ -17,6 +20,9 @@ function App() {
         <SliderProduct />
         <BaneriMadh />
         <KartatOferta />
+        <GlobeSector/>
+        <BaneriBlu2/>
+        <ProductCard />
     </>
   )
 }
