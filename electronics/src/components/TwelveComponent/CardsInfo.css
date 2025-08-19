@@ -1,0 +1,71 @@
+.mbeshtjellesi-kartave{
+  padding: 0 7%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  /* scrollbar-width: 0; */
+}
+
+.kartat-e-medha {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((98% / 3) - 1%);
+  align-items: center;
+  gap: 20px;
+  overflow: hidden;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  scroll-snap-align: start;
+}
+
+.kartaMadhe {
+  display: flex;
+  flex-direction: column;
+  border: solid 3px rgb(182, 182, 182);
+  border-radius: 1rem;
+  cursor: pointer;
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+
+.kartaMadhe-foto > img {
+  width: 100%;
+}
+
+.kartaMadhe-kutiaInfos {
+  padding: 10px;
+  background-color: white;
+}
+
+.kartaMadhe-info {
+  display: flex;
+  gap: 5px;
+  padding: 0 10px;
+}
+
+.kartaMadhe-info > p {
+  border: 1px solid #007fa4;
+  border-radius: 1rem;
+  padding: 3px 5px;
+  font-size: 0.7rem;
+  color: rgb(53, 53, 53);
+}
+
+.kartaMadhe-infoDyte > p {
+  font-size: 1rem;
+  font-stretch: expanded;
+  color: rgb(53, 53, 53);
+}
+
+.kartaMadhe-infoDyte > h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.kartaMadhe-infoDyte > h3 {
+  font-weight: 900;
+  font-size: 1.6rem;
+  font-style: oblique;
+}

@@ -5,7 +5,7 @@
 .naviLart {
   display: flex;
   gap: 10px;
-  padding: 10px 0 15px 11%;
+  padding: 10px 11% 10px 11%;
 }
 
 .naviLart>a {
@@ -248,12 +248,11 @@
 
 /* POP UP BUTONI  */
 
-.mbeshtjellsi-gjithaKategorite {
+ .mbeshtjellsi-gjithaKategorite {
   position: absolute;
   overflow: hidden;
   margin: 0;
   width: 15%;
-  height: 94vh;
   padding: 30px;
   color: rgb(39, 39, 39);
   background-color: #f4f4f4;
@@ -305,7 +304,6 @@
 
 .gjithaKategorite-logoBtn {
   display: flex;
-
   align-items: center;
   justify-content: space-between;
 }
@@ -317,10 +315,10 @@
 }
 
 .gjithaKategorite-logoBtn button {
-  padding: 10px;
+  padding: 6px;
   border: none;
   border-radius: 50%;
-  background-color: transparent;
+  margin: 4px;
   color: black;
 }
 
@@ -340,6 +338,7 @@
   opacity: 1;
   background-color: #3a86ff;
   height: auto;
+  height: 94vh;
 }
 
 /* bacgroundi i zi te hapja e pop up-it */
@@ -360,18 +359,16 @@
   position: absolute;
   width: 25%;
   right: 55%;
-  top: 8%;
+  top: 10%;
   color: rgb(39, 39, 39);
   border-radius: 0 10px 10px 0;
-  transition: 0.3s;
+  /* transition: 0.3s; */
   z-index: 1;
   font-size: 1rem;
   font-weight: 600;
   background: #f4f4f4;
-  padding: 25px 30px;
+  padding: 25px 33px;
   list-style: none;
-  visibility: hidden;
-  opacity: 0;
 }
 
 .kategori-GlobeShops-rekomandon li {
