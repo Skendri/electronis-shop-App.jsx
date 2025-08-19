@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <>
         
-        <section className="fundi faqjaPare">
+        <section className="fundi faqjaPare" id='fundi-lot'>
       <h3>Cmimet tona</h3>
       <h3>TRUSTPILOT</h3>
       <div className="fundi-menu">
