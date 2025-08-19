@@ -4,6 +4,7 @@ import './ProductCard.css'
 const ProductCard = () => {
   return (
     <div style={{padding: "2rem 11%"}}>
+
       <div className="products-card">
         <div className="products-card-majtas">
           <div className="kartaMadhe-info kartaGjere-info">
@@ -81,6 +82,7 @@ const ProductCard = () => {
           </div>
         </div>
       </div>
+      
     </div>
   )
 }

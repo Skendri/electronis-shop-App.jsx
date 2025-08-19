@@ -9,6 +9,11 @@ import KartatOferta from './components/FifthComponent/KartatOferta'
 import GlobeSector from './components/sixthCopmonent/GlobeSector'
 import BaneriBlu2 from './components/SeventhComponent/baneriBlu2'
 import ProductCard from './components/EightthComponent/ProductCard'
+import ItemsCategory from './components/NinthComponent/ItemsCategory'
+import BaneriBlu3 from './components/TenthComponent/BaneriBlu3'
+import Cards from './components/ElevenComponent/Cards'
+import CardsInfo from './components/TwelveComponent/CardsInfo'
+import Footer from './components/Footer/Footer'
 
 function App() {
 
@@ -23,6 +28,11 @@ function App() {
         <GlobeSector/>
         <BaneriBlu2/>
         <ProductCard />
+        <ItemsCategory />
+        <BaneriBlu3 />
+        <Cards />
+        <CardsInfo />
+        <Footer/>
     </>
   )
 }

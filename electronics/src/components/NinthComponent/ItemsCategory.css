@@ -1,0 +1,30 @@
+.kartat-vogla {
+  padding: 2rem 7%;
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  gap: 2rem;
+}
+
+.karta-vogel {
+  padding: 20px 25px 65px 20px;
+}
+
+.karta-vogel img {
+  width: 100%;
+  height: 80%;
+  border-radius: 15px;
+}
+
+.karta-vogel p {
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.8rem;
+  /* color: rgb(68, 68, 68); */
+}
+
+.karta-vogel:hover {
+  box-shadow: rgba(0, 0, 0, 0.06) 2px 4px 13px 0px;
+  border-radius: 10px;
+  text-decoration: underline;
+  cursor: pointer;
+}
