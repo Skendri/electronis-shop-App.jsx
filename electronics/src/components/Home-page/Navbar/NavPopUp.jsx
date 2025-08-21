@@ -1,4 +1,4 @@
-import logo from '../../assets/images/amazon-logo-white.png'
+import logo from '../../../assets/images/amazon-logo-white.png'
 import { useState } from 'react'
 
 const NavPopUp = ({isopen}) => {

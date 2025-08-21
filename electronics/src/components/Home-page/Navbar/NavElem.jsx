@@ -1,5 +1,5 @@
 
-import logo from '../../assets/images/amazon-logo-white.png'
+import logo from '../../../assets/images/amazon-logo-white.png'
 
 const NavElem = ({click, clikButoni}) => {
 
