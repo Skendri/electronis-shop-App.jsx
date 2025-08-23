@@ -272,20 +272,15 @@
   padding: 0;
 }
 
-.emri-lista svg {
-  width: 20px;
-  height: 20px;
-}
-
-.emri-lista>li {
+ .emri-lista .kategoriPopUp {
   display: flex;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
 }
 
-.emri-lista a,
-.emri-lista>li {
+.kategoriPopUp {
+  display: block;
   color: #1a1a1a;
   font-weight: bold;
   list-style: none;
@@ -295,7 +290,7 @@
   font-size: 15px;
 }
 
-.emri-lista>li:hover {
+.emri-lista .kategoriPopUp :hover {
   background-color: rgb(214, 214, 214);
   border-radius: 5px;
   text-decoration: underline;
