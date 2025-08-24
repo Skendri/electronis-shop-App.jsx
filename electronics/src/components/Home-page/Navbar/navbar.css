@@ -277,6 +277,7 @@
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
+  padding: 15px;
 }
 
 .kategoriPopUp {
@@ -290,7 +291,7 @@
   font-size: 15px;
 }
 
-.emri-lista .kategoriPopUp :hover {
+.emri-lista .kategoriPopUp:hover {
   background-color: rgb(214, 214, 214);
   border-radius: 5px;
   text-decoration: underline;
