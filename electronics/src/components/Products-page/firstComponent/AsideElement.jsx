@@ -49,128 +49,22 @@ const AsideElement = () => {
         />
 
         <hr />
-        <RatingCopmonent header={"Rating"} paragraph={"Te Gjitha"} />
+        <RatingCopmonent header={"Rating"} paragraph={"Te Gjitha Komentet"} />
 
         <hr />
 
         <SliderComponent name={"Cmimi 2"} />
-
         <hr />
-
-        <div className="products-col-btn">
-          <button className="products-butonat" data-target="color-content">
-            <p>Ngjyrat</p>
-            <svg width="32" height="32" viewBox="0 0 24 24">
-              <path d="M15.78 11.28a.75.75 0 0 1 .22.53v.38a.77.77 0 0 1-.22.53l-5.14 5.13a.5.5 0 0 1-.71 0l-.71-.71a.49.49 0 0 1 0-.7L13.67 12 9.22 7.56a.5.5 0 0 1 0-.71l.71-.7a.5.5 0 0 1 .71 0Z"></path>
-            </svg>
-          </button>
-          <div id="color-content" className="toggle-section">
-            <div>
-              <div className="itemconfiguration">
-                <label>
-                  {" "}
-                  <input type="checkbox" />
-                  <p>Argjendi</p>{" "}
-                </label>
-                <label>
-                  {" "}
-                  <input type="checkbox" />
-                  <p>Gri</p>{" "}
-                </label>
-                <label>
-                  {" "}
-                  <input type="checkbox" />
-                  <p>E zeze</p>{" "}
-                </label>
-                <label>
-                  {" "}
-                  <input type="checkbox" />
-                  <p>Roze</p>{" "}
-                </label>
-                <label>
-                  {" "}
-                  <input type="checkbox" />
-                  <p>Argjendi</p>{" "}
-                </label>
-                <label>
-                  {" "}
-                  <input type="checkbox" />
-                  <p>Gri</p>{" "}
-                </label>
-                <label>
-                  {" "}
-                  <input type="checkbox" />
-                  <p>E zeze</p>{" "}
-                </label>
-                <label>
-                  {" "}
-                  <input type="checkbox" />
-                  <p>Roze</p>{" "}
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Telefonat header={"Telefonat"} iphone={"Iphone"} samsungGalaxy={"Samsung Galaxy"} xiaomi={"Xiaomi"} google={"Google"} onePlus={"OnePlus"} lG={"LG"} sony={"Sony"} blackBerry={"BlackBerry"} />
+        <hr />
+        <Ngjyrat header={"Ngjyrat"} argjendi={"Argjendi"} gri={"Gri"} ezeze={"E zeze"} roze={"Roze"} blu={"Blu"} jeshile={"Jeshile"} kafe={"Kafe"} gold={"Gold"} />
 
         <hr />
 
         <SliderComponent name={"Cmimi 3"} />
 
         {/* <!--                vazhdimi    i toggle          --> */}
-        <div className="products-col-btn">
-          <button className="products-butonat" data-target="telefonat">
-            <p>Telefonat</p>
-            <svg width="32" height="32" viewBox="0 0 24 24">
-              <path d="M15.78 11.28a.75.75 0 0 1 .22.53v.38a.77.77 0 0 1-.22.53l-5.14 5.13a.5.5 0 0 1-.71 0l-.71-.71a.49.49 0 0 1 0-.7L13.67 12 9.22 7.56a.5.5 0 0 1 0-.71l.71-.7a.5.5 0 0 1 .71 0Z"></path>
-            </svg>
-          </button>
-          <div id="telefonat" className="toggle-section">
-            <div>
-              <div className="itemconfiguration">
-                <label>
-                  {" "}
-                  <input type="checkbox" />
-                  <p>Iphone</p>{" "}
-                </label>
-                <label>
-                  {" "}
-                  <input type="checkbox" />
-                  <p>Samsung Galaxy</p>{" "}
-                </label>
-                <label>
-                  {" "}
-                  <input type="checkbox" />
-                  <p>XIAOMI</p>{" "}
-                </label>
-                <label>
-                  {" "}
-                  <input type="checkbox" />
-                  <p>Google</p>{" "}
-                </label>
-                <label>
-                  {" "}
-                  <input type="checkbox" />
-                  <p>OnePlus</p>{" "}
-                </label>
-                <label>
-                  {" "}
-                  <input type="checkbox" />
-                  <p>LG</p>{" "}
-                </label>
-                <label>
-                  {" "}
-                  <input type="checkbox" />
-                  <p>Sony</p>{" "}
-                </label>
-                <label>
-                  {" "}
-                  <input type="checkbox" />
-                  <p>BlackBerry</p>{" "}
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Telefonat header={"Telefonat"} iphone={"Iphone"} samsungGalaxy={"Samsung Galaxy"} xiaomi={"Xiaomi"} google={"Google"} onePlus={"OnePlus"} lG={"LG"} sony={"Sony"} blackBerry={"BlackBerry"} />
 
         <hr />
       </div>
@@ -301,44 +195,176 @@ function TheksuarContent({ header, paragarf1, paragarf2 }) {
 }
 
 function RatingCopmonent({ header, paragraph }) {
+  return (
+    <>
+      <div className="products-col-btn">
+        <button className="products-butonat" data-target="rating-content">
+          <p>{header}</p>
+          <svg width="32" height="32" viewBox="0 0 24 24">
+            <path d="M15.78 11.28a.75.75 0 0 1 .22.53v.38a.77.77 0 0 1-.22.53l-5.14 5.13a.5.5 0 0 1-.71 0l-.71-.71a.49.49 0 0 1 0-.7L13.67 12 9.22 7.56a.5.5 0 0 1 0-.71l.71-.7a.5.5 0 0 1 .71 0Z"></path>
+          </svg>
+        </button>
+
+        <div id="rating-content" className="toggle-section">
+          <div>
+            <label>
+              {" "}
+              <input type="checkbox" /> &#11088; &#11088; &#11088; &#11088;
+              &#11088; &#11088;{" "}
+            </label>
+            <label>
+              {" "}
+              <input type="checkbox" /> &#11088; &#11088; &#11088; &#11088;
+              &#11088;{" "}
+            </label>
+            <label>
+              {" "}
+              <input type="checkbox" /> &#11088; &#11088; &#11088;{" "}
+            </label>
+            <label>
+              {" "}
+              <input type="checkbox" /> &#11088;
+            </label>
+            <label>
+              {" "}
+              <input type="checkbox" />
+              <p>{paragraph}</p>{" "}
+            </label>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+function Ngjyrat({header, argjendi, gri, ezeze, roze, blu, jeshile, kafe, gold}) {
+  return (
   <>
     <div className="products-col-btn">
-      <button className="products-butonat" data-target="rating-content">
+      <button className="products-butonat" data-target="color-content">
         <p>{header}</p>
         <svg width="32" height="32" viewBox="0 0 24 24">
           <path d="M15.78 11.28a.75.75 0 0 1 .22.53v.38a.77.77 0 0 1-.22.53l-5.14 5.13a.5.5 0 0 1-.71 0l-.71-.71a.49.49 0 0 1 0-.7L13.67 12 9.22 7.56a.5.5 0 0 1 0-.71l.71-.7a.5.5 0 0 1 .71 0Z"></path>
         </svg>
       </button>
-
-      <div id="rating-content" className="toggle-section">
+      
+      <div id="color-content" className="toggle-section">
         <div>
-          <label>
-            {" "}
-            <input type="checkbox" /> &#11088; &#11088; &#11088; &#11088;
-            &#11088; &#11088;{" "}
-          </label>
-          <label>
-            {" "}
-            <input type="checkbox" /> &#11088; &#11088; &#11088; &#11088;
-            &#11088;{" "}
-          </label>
-          <label>
-            {" "}
-            <input type="checkbox" /> &#11088; &#11088; &#11088;{" "}
-          </label>
-          <label>
-            {" "}
-            <input type="checkbox" /> &#11088;
-          </label>
-          <label>
-            {" "}
-            <input type="checkbox" />
-            <p>{paragraph}</p>{" "}
-          </label>
+          <div className="itemconfiguration">
+            <label>
+              {" "}
+              <input type="checkbox" />
+              <p>{argjendi}</p>{" "}
+            </label>
+            
+            <label>
+              {" "}
+              <input type="checkbox" />
+              <p>{gri}</p>{" "}
+            </label>
+            
+            <label>
+              {" "}
+              <input type="checkbox" />
+              <p>{ezeze}</p>{" "}
+            </label>
+            
+            <label>
+              {" "}
+              <input type="checkbox" />
+              <p>{roze}</p>{" "}
+            </label>
+            
+            <label>
+              {" "}
+              <input type="checkbox" />
+              <p>{blu}</p>{" "}
+            </label>
+            
+            <label>
+              {" "}
+              <input type="checkbox" />
+              <p>{jeshile}</p>{" "}
+            </label>
+            
+            <label>
+              {" "}
+              <input type="checkbox" />
+              <p>{kafe}</p>{" "}
+            </label>
+              
+            <label>
+              {" "}
+              <input type="checkbox" />
+              <p>{gold}</p>{" "}
+            </label>
+          </div>
         </div>
       </div>
     </div>
   </>
+)
+}
+
+function Telefonat({header, iphone, samsungGalaxy, xiaomi, google, onePlus, lG, sony, blackBerry}) {
+  return (
+    <>
+    <div className="products-col-btn">
+          <button className="products-butonat" data-target="telefonat">
+            <p>{header}</p>
+            <svg width="32" height="32" viewBox="0 0 24 24">
+              <path d="M15.78 11.28a.75.75 0 0 1 .22.53v.38a.77.77 0 0 1-.22.53l-5.14 5.13a.5.5 0 0 1-.71 0l-.71-.71a.49.49 0 0 1 0-.7L13.67 12 9.22 7.56a.5.5 0 0 1 0-.71l.71-.7a.5.5 0 0 1 .71 0Z"></path>
+            </svg>
+          </button>
+          <div id="telefonat" className="toggle-section">
+            <div>
+              <div className="itemconfiguration">
+                <label>
+                  {" "}
+                  <input type="checkbox" />
+                  <p>{iphone}</p>{" "}
+                </label>
+                <label>
+                  {" "}
+                  <input type="checkbox" />
+                  <p>{samsungGalaxy}</p>{" "}
+                </label>
+                <label>
+                  {" "}
+                  <input type="checkbox" />
+                  <p>{xiaomi}</p>{" "}
+                </label>
+                <label>
+                  {" "}
+                  <input type="checkbox" />
+                  <p>{google}</p>{" "}
+                </label>
+                <label>
+                  {" "}
+                  <input type="checkbox" />
+                  <p>{onePlus}</p>{" "}
+                </label>
+                <label>
+                  {" "}
+                  <input type="checkbox" />
+                  <p>{lG}</p>{" "}
+                </label>
+                <label>
+                  {" "}
+                  <input type="checkbox" />
+                  <p>{sony}</p>{" "}
+                </label>
+                <label>
+                  {" "}
+                  <input type="checkbox" />
+                  <p>{blackBerry}</p>{" "}
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+    </>
+  )
 }
 
 export default AsideElement;
