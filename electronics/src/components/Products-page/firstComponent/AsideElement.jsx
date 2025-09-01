@@ -1,21 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "./AsideElement.css";
 
 const AsideElement = () => {
-  //   const propsData = [{
-  //     id: 0,
-  //     header: "Nismat ne vazhdim",
-  //     paragarf1: "Dorezimi FALAS",
-  //     paragarf2: "KTHIMI NE SHKOLLE",
-  //     paragarf3: "OUTLET"
-  //   },
-  //   {
-  //     id: 1,
-  //     header: "E theksuar",
-  //     paragarf1: "ME TE SHITURAT",
-  //     paragarf2: "GLOBESHOPS REKOMANDON"
-  //   }
-  // ]
+
+      const [isOpen, setIsOpen] = useState(false);
+
+    const toggle = () => {
+    setIsOpen(!isOpen);
+    console.log( "buttoni u klikua",  isOpen);
+  };
+
 
   return (
     <>
@@ -29,7 +23,7 @@ const AsideElement = () => {
 
         <hr />
 
-        <SliderComponent name={"Cmimi"} />
+        <SliderComponent name={"Cmimi"}  toggle={toggle}/>
 
         <hr />
 
@@ -72,12 +66,14 @@ const AsideElement = () => {
   );
 };
 
-function SliderComponent({ name }) {
+function SliderComponent({ name, toggle }) {
+
+  
   return (
     <div>
       <div id="kontenieri-filter">
         <div className="products-row-btn">
-          <button className="products-butonat" data-target="price-toggle-btn-1">
+          <button onClick={toggle} className="products-butonat" data-target="price-toggle-btn-1">
             <p>{name}</p>
             <svg width="32" height="32" viewBox="0 0 24 24">
               <path d="M15.78 11.28a.75.75 0 0 1 .22.53v.38a.77.77 0 0 1-.22.53l-5.14 5.13a.5.5 0 0 1-.71 0l-.71-.71a.49.49 0 0 1 0-.7L13.67 12 9.22 7.56a.5.5 0 0 1 0-.71l.71-.7a.5.5 0 0 1 .71 0Z"></path>

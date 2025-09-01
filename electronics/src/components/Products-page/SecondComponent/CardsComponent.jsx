@@ -4,6 +4,10 @@ import CardData from "./CardData";
 console.log(CardData);
 
 const CardsComponent = () => {
+  const displayProduct = CardData;
+  
+  console.log( "kto jane produktet e kart data" + displayProduct);
+  
   return (
     <>
       <div className="products-djathtas-container">
@@ -23,7 +27,11 @@ const CardsComponent = () => {
           src="./images/kategori-banner-card.gif"
         />
         {/* <!--                cartat e produkteve djathtas          --> */}
-        <ProductCard CardData={CardData} />
+        {/* <ProductCard CardData={CardData} /> */}
+
+        {displayProduct.map((product, i) => (
+          <ProductCard key={`${product.id} - ${i}`} product={product} />
+        ))}
 
         <img
           className="kategori-banner-card"
@@ -65,71 +73,71 @@ function ProductHeader({header, paragrafi, button, text1, text2, text3, text4, t
     )
 }
 
-const ProductCard = ({CardData}) => {
+const ProductCard = ({product}) => {
   return (
     <>
       <div className="products-card">
         <div className="products-card-majtas">
           <div className="kartaMadhe-info kartaGjere-info">
-            <p>{CardData.paragrafi1}</p>
+            <p>{product.paragrafi1}</p>
           </div>
           
-          <h3>{CardData.header1}</h3>
+          <h3>{product.header1}</h3>
           
           <div className="products-card-product">
             <img 
-              src={CardData.img} 
-              alt={CardData.paragrafi1}
+              src={product.img} 
+              alt={product.paragrafi1}
             />
             
             <div className="informacioni-produktit">
-              <p>{CardData.llojiPaisjes}</p>
-              <h4>{CardData.paisja}</h4>
+              <p>{product.llojiPaisjes}</p>
+              <h4>{product.paisja}</h4>
               
-              <p>{CardData.sistemiOperativ}</p>
+              <p>{product.sistemiOperativ}</p>
               <h4>-</h4>
               
-              <p>{CardData.sensori}</p>
-              <h4>{CardData.sensoriInfo}</h4>
+              <p>{product.sensori}</p>
+              <h4>{product.sensoriInfo}</h4>
               
-              <p>{CardData.bateri}</p>
-              <h4>{CardData.bateriinfo}</h4>
+              <p>{product.bateri}</p>
+              <h4>{product.bateriinfo}</h4>
             </div>
           </div>
           
           <div className="products-card-reviewsIMG">
-            <span>{CardData.stars}</span>
-            <p>{CardData.paragraphStars}</p>
+            <span>{product.stars}</span>
+            <p>{product.paragraphStars}</p>
           </div>
         </div>
         
         <div className="products-card-djathtas">
-          <h4>{CardData.cmimiRekomandim}</h4>
-          <h3>{CardData.cmimi}</h3>
+          <h4>{product.cmimiRekomandim}</h4>
+          <h3>{product.cmimi}</h3>
           
           <a href="#">
-            {CardData.link}
+            {product.link}
           </a>
           
-          <p>{CardData.kontributi}</p>
+          <p>{product.kontributi}</p>
           
           <div className="opsionet-dorezimi">
-            <h4>{CardData.opsionetDorezimi} <span>{CardData.opsionetDorezimi2}</span></h4>
+            <h4>{product.opsionetDorezimi} <span>{product.opsionetDorezimi2}</span></h4>
             <p>
-             {CardData.opsionetDorezimi3}
+             {product.opsionetDorezimi3}
             </p>
           </div>
           
           <div className="opsionet-koleksioni-falas">
-            <h4>{CardData.koleksioni}</h4>
+            <h4>{product.koleksioni}</h4>
             <p>
-              {CardData.kontrollKolkesioni}
-              <span>{CardData.span} {">"}</span>
+              {product.kontrollKolkesioni}
+              <span>{product.span} {">"}</span>
             </p>
           </div>
           
           <div className="opsionet-shto-shporte">
-            <button>{CardData.shporta}</button>
+            <button id={product.id}> {product.id} {product.shporta}</button>
             <button>
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
