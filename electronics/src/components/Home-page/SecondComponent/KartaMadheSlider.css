@@ -1,18 +1,4 @@
 
-
-.butonat-e-kontrolluesit {
-  text-align: end;
-  padding: 20px 0;
-  margin-right: 50px;
-}
-
-.butonat-e-kontrolluesit > button {
-  padding: 8px 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
 .butonat-e-kontrolluesit > button:hover {
   background-color: #616161;
 }
@@ -23,7 +9,6 @@
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
 }
-
 
 
 #mbeshtjellesi-dyte-kartave-klub {
@@ -68,4 +53,19 @@
 
 .kartaGjere-kutia {
   padding: 0% 2% 0 2%;
+}
+
+
+
+.butonat-e-kontrolluesit {
+  text-align: end;
+  padding: 20px 0;
+  margin-right: 2% ;
+}
+
+.butonat-e-kontrolluesit > button {
+  padding: 8px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
