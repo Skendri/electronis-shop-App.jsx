@@ -116,6 +116,19 @@ const AsideElement = () => {
 };
 
 const SliderComponent = React.forwardRef(({ name, toggle, isOpen }, ref) => {
+  const [minValue, setMinValue] = useState(0);
+  const [maxValue, setMaxValue] = useState(200);
+
+  const handleMinChange = (e) => {
+    const value = parseInt(e.target.value) || 0;
+    setMinValue(value);
+  };
+
+  const handleMaxChange = (e) => {
+    const value = parseInt(e.target.value) || 200;
+    setMaxValue(value);
+  };
+
   return (
     <div>
       <div id="kontenieri-filter">
@@ -135,6 +148,8 @@ const SliderComponent = React.forwardRef(({ name, toggle, isOpen }, ref) => {
                 className="range-min-input"
                 type="number"
                 placeholder="Nga 0 $"
+                value={minValue}
+                onChange={handleMinChange}
               />
             </div>
 
@@ -143,6 +158,8 @@ const SliderComponent = React.forwardRef(({ name, toggle, isOpen }, ref) => {
                 type="number"
                 className="range-max-input"
                 placeholder="Te 200 $"
+                value={maxValue}
+                onChange={handleMaxChange}
               />
             </div>
           </div>
@@ -158,14 +175,16 @@ const SliderComponent = React.forwardRef(({ name, toggle, isOpen }, ref) => {
                 className="range-min-input"
                 min="0"
                 max="200"
-                value="0"
+                value={minValue}
+                onChange={handleMinChange}
               />
               <input
                 type="range"
                 className="range-max-input"
                 min="0"
                 max="200"
-                value="200"
+                value={maxValue}
+                onChange={handleMaxChange}
               />
             </div>
           </div>
