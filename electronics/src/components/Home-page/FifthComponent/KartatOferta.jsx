@@ -166,7 +166,7 @@ const KartatOferta = () => {
             paragrafi4={card.paragrafi4}
             />
            ) )
-          };
+          }
           
         </div>
       </div>

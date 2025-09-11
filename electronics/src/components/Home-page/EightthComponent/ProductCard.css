@@ -1,18 +1,20 @@
 
 
 /*-------------------- PRODUCTS DJATHTAS ---------------------*/
-.products-djathtas-container {
+.home-products-djathtas-container {
   width: 100%;
   padding: 0 0 0 4%;
 }
-.products-rrezultate {
+
+.home-products-rrezultate {
   display: flex;
   align-items: center;
   line-height: 0.3;
   justify-content: space-between;
   margin-bottom: 1rem;
 }
-.products-rrezultate button {
+
+.home-products-rrezultate button {
   display: flex;
   align-items: center;
   padding: 12px 20px;
@@ -21,27 +23,31 @@
   border-radius: 7px;
   cursor: pointer;
 }
-.products-rrezultate svg {
+
+.home-products-rrezultate svg {
   rotate: 90deg;
 }
-.products-rrezultate h3 {
+
+.home-products-rrezultate h3 {
   font-size: 1.8rem;
 }
-.products-rrezultate p {
+
+.home-products-rrezultate p {
   font-size: 1.2rem;
 }
-.products-rrezultate a {
+
+.home-products-rrezultate a {
   text-decoration: underline;
   color: #000000;
 }
 
-.button-tabele {
+.home-button-tabele {
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
-.tabela {
+.home-tabela {
   display: none; /* Hidden by default */
   background-color: #f9f9f9;
   border: 1px solid #ddd;
@@ -53,7 +59,7 @@
   top: 60px;
 }
 
-.tabela p {
+.home-tabela p {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,27 +68,27 @@
   height: 30px;
 }
 
-.tabela p.active {
+.home-tabela p.active {
   background-color: #008bff;
 }
 
-.tabela p:hover {
+.home-tabela p:hover {
   background-color: #008bff;
 }
 
-.kategori-banner-card {
+.home-kategori-banner-card {
   width: 100%;
   border-radius: 15px;
 }
 
-.products-card-majtas {
+.home-products-card-majtas {
   padding: 0;
   margin: 0;
 }
 
-.products-card {
+.home-products-card {
   display: flex;
-  width: 96.2%;
+  width: 81.2%;
   height: auto;
   overflow: hidden;
   border-radius: 10px;
@@ -91,30 +97,32 @@
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.products-card-majtas {
+.home-products-card-majtas {
   width: 100%;
 }
 
-.products-card-product {
+.home-products-card-product {
   display: flex;
   gap: 10%;
 }
-.products-card-product > img {
+
+.home-products-card-product > img {
   width: 25%;
 }
-.products-card-product > div {
+
+.home-products-card-product > div {
   font-size: 0.9rem;
   line-height: 0.4;
 }
 
 /*u shtuan per here te fundit*/
-.kartaMadhe-info {
+.home-kartaMadhe-info {
   display: flex;
   gap: 5px;
   padding: 0 10px;
 }
 
-.kartaMadhe-info .kartaGjere-info  > p {
+.home-kartaMadhe-info .kartaGjere-info  > p {
   border: 3px solid #008bff;
   border-radius: 1rem;
   padding: 3px 5px;
@@ -122,96 +130,95 @@
   color: rgb(53, 53, 53);
 }
 
-.kartaMadhe-infoDyte > p {
+.home-kartaMadhe-infoDyte > p {
   font-size: 1rem;
   font-stretch: expanded;
   color: rgb(53, 53, 53);
 }
 
-.kartaMadhe-infoDyte > h4 {
+.home-kartaMadhe-infoDyte > h4 {
   font-size: 0.9rem;
   font-weight: 700;
 }
 
-.kartaMadhe-infoDyte > h3 {
+.home-kartaMadhe-infoDyte > h3 {
   font-weight: 900;
   font-size: 1.6rem;
   font-style: oblique;
 }   /*u shtuan per here te fundit*/
 
-.products-card-djathtas {
+.home-products-card-djathtas {
   line-height: 0;
   padding-top: 1rem;
 }
-.products-card-djathtas a {
+.home-products-card-djathtas a {
   line-height: normal;
   font-size: 0.8rem;
   color: #525252;
 }
-.products-card-djathtas p {
+.home-products-card-djathtas p {
   font-size: 0.8rem;
   color: #525252;
 }
-.products-card-djathtas h4 {
+.home-products-card-djathtas h4 {
   font-size: 0.9rem;
   margin-top: 2rem;
 }
-.products-card-djathtas h3 {
+.home-products-card-djathtas h3 {
   color: #007fa4;
   font-size: 1.8rem;
 }
-.products-card-djathtas > .opsionet-dorezimi {
+.home-products-card-djathtas > .home-opsionet-dorezimi {
   padding: 0;
   margin: 0;
 }
-.products-card-djathtas > .opsionet-dorezimi > p,
-.products-card-djathtas > .opsionet-koleksioni-falas > p {
+.home-products-card-djathtas > .home-opsionet-dorezimi > p,
+.home-products-card-djathtas > .home-opsionet-koleksioni-falas > p {
   padding: 0;
   margin: 0;
   font-size: 0.73rem;
 }
 
-.products-card-djathtas > .opsionet-koleksioni-falas > h4 {
+.home-products-card-djathtas > .opsionet-koleksioni-falas > h4 {
   padding: 0;
   margin: 0;
   font-size: 0.8rem;
 }
-.products-card-djathtas > .opsionet-dorezimi > h4 {
+.home-products-card-djathtas > .opsionet-dorezimi > h4 {
   margin-top: 2rem;
 }
-.products-card-djathtas > .opsionet-koleksioni-falas span {
+.home-products-card-djathtas > .opsionet-koleksioni-falas span {
   font-size: 0.8rem;
 }
 
-.opsionet-dorezimi {
+.home-opsionet-dorezimi {
   text-align: start;
   line-height: 150%;
   padding: 20px 0;
   align-items: center;
 }
 
-.opsionet-dorezimi > h4 {
+.home-opsionet-dorezimi > h4 {
   display: flex;
   justify-content: space-between;
   color: green;
   margin: 0;
 }
 
-.opsionet-dorezimi p,
+.home-opsionet-dorezimi p,
 span {
   color: rgb(85, 85, 85);
   font-size: 0.9rem;
   margin: 0;
 }
 
-.opsionet-koleksioni-falas h4 {
+.home-opsionet-koleksioni-falas h4 {
   color: rgb(85, 85, 85);
   font-size: 0.9rem;
-
   margin: 0;
 }
 
-.opsionet-koleksioni-falas {
+.home-opsionet-koleksioni-falas {
   display: flex;
   flex-direction: column;
   text-align: start;
@@ -219,34 +226,34 @@ span {
   padding: 0 0 20px 0;
 }
 
-.opsionet-koleksioni-falas > p {
+.home-opsionet-koleksioni-falas > p {
   font-size: 0.9rem;
   color: rgb(85, 85, 85);
   margin: 0;
 }
 
-.opsionet-koleksioni-falas p > span {
+.home-opsionet-koleksioni-falas p > span {
   font-weight: 900;
   color: black;
   margin: 0;
 }
 
-.products-card-reviewsIMG {
+.home-products-card-reviewsIMG {
   display: flex;
   padding: 50px 0 0 0;
   align-items: center;
 }
-.products-card-reviewsIMG > img {
+.home-products-card-reviewsIMG > img {
   width: 20%;
   height: 30px;
 }
 
-.opsionet-shto-shporte {
+.home-opsionet-shto-shporte {
   display: flex;
   gap: 2%;
 }
 
-.opsionet-shto-shporte > button:first-child {
+.home-opsionet-shto-shporte > button:first-child {
   background-color: #3a86ff;
   color: #ffffff;
   width: 100%;
@@ -254,7 +261,7 @@ span {
   border-radius: 6px;
 }
 
-.opsionet-shto-shporte > button:last-child {
+.home-opsionet-shto-shporte > button:last-child {
   background-color: transparent;
   border: solid 2px black;
   border-radius: 6px;

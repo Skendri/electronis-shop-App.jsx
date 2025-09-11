@@ -67,7 +67,7 @@ const KartaMadheSlider = () => {
   }, [currentIndex]);
 
   return (
-    <div style={{padding: '1% 10%' }}>
+    <div style={{padding: '2rem 13%' }}>
       <div id="mbeshtjellesi-gjere-kartave-klub" className="mbeshtjellesi-kartave">
         <div id="kartat-e-gjera-klub" className="kartat-e-medha" ref={sliderRef}>
           {cardData.map((card, index) => (
