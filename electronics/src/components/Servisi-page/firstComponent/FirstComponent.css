@@ -336,6 +336,15 @@
 
 /* contenti i dyte dinamic */
 
+.stats {
+  padding: 5rem 0;
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+}
+
 .stats p {
   margin-bottom: 1.5rem;
   max-width: 40em;
@@ -343,7 +352,7 @@
 
 
 
-h1 {
+/* h1 {
   margin-top: 0;
   font-size: 3.052rem;
 }
@@ -371,27 +380,18 @@ a {
 ul {
   list-style-type: none;
   padding: 0;
-}
+} */
 
-.img {
+/* .img {
   width: 100%;
   display: block;
   object-fit: cover;
-}
+} */
 /*
 =============== 
 Numbers 
 ===============
 */
-
-/* section {
-  padding: 5rem 0;
-  width: 90vw;
-  max-width: 1170px;
-  margin: 0 auto;
-  display: grid;
-  gap: 2rem;
-} */
 
 article {
   background: var(--white);

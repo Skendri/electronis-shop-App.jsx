@@ -1,12 +1,14 @@
 import React from "react";
+import Navbar from "./Home-page/Navbar/Navbar";
+import Footer from "./Home-page/Footer/Footer";
 import "./Servisi-page/firstComponent/FirstComponent.css";
 
 const Servisi = () => {
 
 
   return (
-    <div>
-      <>
+      <div>
+      <Navbar />
         {/*          kontenti i  faqes                         */}
         <section className="faqjaPare-dyqanet">
           <div className="dyqanet-globe">
@@ -22,6 +24,7 @@ const Servisi = () => {
             <h1>Servisi</h1>
           </div>
         </section>
+        
         <section className="faqjaPare">
           <div className="seksioni1">
             <img
@@ -759,6 +762,7 @@ const Servisi = () => {
             </div>
           </div>
         </section>
+        
         {/*       contenti i dyte dynamic         */}
         <section className="stats">
           <article>
@@ -781,8 +785,8 @@ const Servisi = () => {
           </article>
         </section>
         {/*                      fundi i kontentit te faqes                                  */}
-      </>
-    </div>
+        <Footer />
+      </div>
   );
 };
 
