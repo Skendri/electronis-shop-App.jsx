@@ -14,7 +14,7 @@
   display: none;
 }
 
-.kartat-e-medha {
+.kartat-e-medha-current {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: calc((95% / 3) - 1%);
@@ -37,18 +37,7 @@
   padding: 1% 3%;
 }
 
-.kartat-e-medha.terheqje,
-.kartat-plan-pare.terheqje {
-  cursor: grab;
-  user-select: none;
-}
-
-.kartat-e-medha.jo-transition,
-.kartat-plan-pare.jo-transition {
-  scroll-behavior: auto;
-}
-
-.kartat-e-medha a {
+.kartat-e-medha-current a {
   text-decoration: none;
   color: black;
 }

@@ -4,6 +4,7 @@ import KartatSlide from "./KartatChild";
 import { useState, useRef, useEffect } from "react";
 
 const Slider = () => {
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const sliderRef = useRef(null);
   const cardsPerView = 3; // Number of cards visible at once
@@ -40,7 +41,7 @@ const Slider = () => {
   return (
     <div>
       <section id="mbeshtjellesi-kartave" className="mbeshtjellesi-kartave">
-        <div id="kartat-e-medha" className="kartat-e-medha" ref={sliderRef}>
+        <div id="kartat-e-medha-current" className="kartat-e-medha-current" ref={sliderRef}>
           <KartatSlide
             paragraf1={"Ne dyqan dhe online"}
             paragraf2={"Deri me 9 gusht"}
