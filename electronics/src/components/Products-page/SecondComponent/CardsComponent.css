@@ -113,13 +113,13 @@
   padding: 0 10px;
 }
 
-/* .kartaMadhe-info > p {
+.kartaMadhe-info > p {
   border: 3px solid #007fa4;
   border-radius: 1rem;
   padding: 3px 5px;
   font-size: 0.7rem;
   color: rgb(53, 53, 53);
-} */
+}
 
 .kartaMadhe-infoDyte > p {
   font-size: 1rem;
@@ -136,7 +136,8 @@
   font-weight: 900;
   font-size: 1.6rem;
   font-style: oblique;
-}   /*u shtuan per here te fundit*/
+}   
+/*u shtuan per here te fundit*/
 
 .products-card-djathtas {
   line-height: 0;

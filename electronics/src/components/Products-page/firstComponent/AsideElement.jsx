@@ -1,15 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./AsideElement.css";
 
 const AsideElement = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isOpenNismat, setIsOpenNismat] = useState(false);
+  const [isOpenTheksuar, setIsOpenTheksuar] = useState(false);
+  const buttoni = useRef(null);
+  const buttoniNismat = useRef(null);
 
-      const [isOpen, setIsOpen] = useState(false);
-
-    const toggle = () => {
+  function toggle() {
     setIsOpen(!isOpen);
-    console.log( "buttoni u klikua",  isOpen);
-  };
+  }
 
+  function toggleNismat() {
+    setIsOpenNismat(!isOpenNismat);
+  }
+
+  function toggleTheksuar() {
+    setIsOpenTheksuar(!isOpenTheksuar);
+  }
 
   return (
     <>
@@ -23,7 +32,12 @@ const AsideElement = () => {
 
         <hr />
 
-        <SliderComponent name={"Cmimi"}  toggle={toggle}/>
+        <SliderComponent
+          name={"Cmimi"}
+          toggle={toggle}
+          isOpen={isOpen}
+          ref={buttoni}
+        />
 
         <hr />
 
@@ -32,6 +46,9 @@ const AsideElement = () => {
           paragarf1={"Dorezimi FALAS"}
           paragarf2={"KTHIMI NE SHKOLLE"}
           paragarf3={"OUTLET"}
+          toggleNismat={toggleNismat}
+          isOpenNismat={isOpenNismat}
+          ref={buttoniNismat}
         />
 
         <hr />
@@ -43,22 +60,57 @@ const AsideElement = () => {
         />
 
         <hr />
+
         <RatingCopmonent header={"Rating"} paragraph={"Te Gjitha Komentet"} />
 
         <hr />
 
         <SliderComponent name={"Cmimi 2"} />
+
         <hr />
-        <Telefonat header={"Telefonat"} iphone={"Iphone"} samsungGalaxy={"Samsung Galaxy"} xiaomi={"Xiaomi"} google={"Google"} onePlus={"OnePlus"} lG={"LG"} sony={"Sony"} blackBerry={"BlackBerry"} />
+
+        <Telefonat
+          header={"Telefonat"}
+          iphone={"Iphone"}
+          samsungGalaxy={"Samsung Galaxy"}
+          xiaomi={"Xiaomi"}
+          google={"Google"}
+          onePlus={"OnePlus"}
+          lG={"LG"}
+          sony={"Sony"}
+          blackBerry={"BlackBerry"}
+        />
+
         <hr />
-        <Ngjyrat header={"Ngjyrat"} argjendi={"Argjendi"} gri={"Gri"} ezeze={"E zeze"} roze={"Roze"} blu={"Blu"} jeshile={"Jeshile"} kafe={"Kafe"} gold={"Gold"} />
+
+        <Ngjyrat
+          header={"Ngjyrat"}
+          argjendi={"Argjendi"}
+          gri={"Gri"}
+          ezeze={"E zeze"}
+          roze={"Roze"}
+          blu={"Blu"}
+          jeshile={"Jeshile"}
+          kafe={"Kafe"}
+          gold={"Gold"}
+        />
 
         <hr />
 
         <SliderComponent name={"Cmimi 3"} />
 
         {/* <!--                vazhdimi    i toggle          --> */}
-        <Telefonat header={"Telefonat"} iphone={"Iphone"} samsungGalaxy={"Samsung Galaxy"} xiaomi={"Xiaomi"} google={"Google"} onePlus={"OnePlus"} lG={"LG"} sony={"Sony"} blackBerry={"BlackBerry"} />
+        <Telefonat
+          header={"Telefonat"}
+          iphone={"Iphone"}
+          samsungGalaxy={"Samsung Galaxy"}
+          xiaomi={"Xiaomi"}
+          google={"Google"}
+          onePlus={"OnePlus"}
+          lG={"LG"}
+          sony={"Sony"}
+          blackBerry={"BlackBerry"}
+        />
 
         <hr />
       </div>
@@ -66,14 +118,29 @@ const AsideElement = () => {
   );
 };
 
-function SliderComponent({ name, toggle }) {
+const SliderComponent = React.forwardRef(({ name, toggle, isOpen }, ref) => {
+  const [minValue, setMinValue] = useState(0);
+  const [maxValue, setMaxValue] = useState(200);
 
-  
+  const handleMinChange = (e) => {
+    const value = parseInt(e.target.value) || 0;
+    setMinValue(value);
+  };
+
+  const handleMaxChange = (e) => {
+    const value = parseInt(e.target.value) || 200;
+    setMaxValue(value);
+  };
+
   return (
     <div>
       <div id="kontenieri-filter">
         <div className="products-row-btn">
-          <button onClick={toggle} className="products-butonat" data-target="price-toggle-btn-1">
+          <button
+            onClick={toggle}
+            className="products-butonat"
+            data-target="price-toggle-btn-1"
+          >
             <p>{name}</p>
             <svg width="32" height="32" viewBox="0 0 24 24">
               <path d="M15.78 11.28a.75.75 0 0 1 .22.53v.38a.77.77 0 0 1-.22.53l-5.14 5.13a.5.5 0 0 1-.71 0l-.71-.71a.49.49 0 0 1 0-.7L13.67 12 9.22 7.56a.5.5 0 0 1 0-.71l.71-.7a.5.5 0 0 1 .71 0Z"></path>
@@ -81,13 +148,20 @@ function SliderComponent({ name, toggle }) {
           </button>
         </div>
 
-        <div id="price-toggle-btn-1" className="toggle-section">
+        <div
+          ref={ref}
+          style={{ display: isOpen ? "none" : "block" }}
+          id="price-toggle-btn-1"
+          className="toggle-section"
+        >
           <div id="content-1">
             <div className="range">
               <input
                 className="range-min-input"
                 type="number"
                 placeholder="Nga 0 $"
+                value={minValue}
+                onChange={handleMinChange}
               />
             </div>
 
@@ -96,6 +170,8 @@ function SliderComponent({ name, toggle }) {
                 type="number"
                 className="range-max-input"
                 placeholder="Te 200 $"
+                value={maxValue}
+                onChange={handleMaxChange}
               />
             </div>
           </div>
@@ -111,14 +187,16 @@ function SliderComponent({ name, toggle }) {
                 className="range-min-input"
                 min="0"
                 max="200"
-                value="0"
+                value={minValue}
+                onChange={handleMinChange}
               />
               <input
                 type="range"
                 className="range-max-input"
                 min="0"
                 max="200"
-                value="200"
+                value={maxValue}
+                onChange={handleMaxChange}
               />
             </div>
           </div>
@@ -126,65 +204,93 @@ function SliderComponent({ name, toggle }) {
       </div>
     </div>
   );
-}
+});
 
-function ProductCustomization({ header, paragarf1, paragarf2, paragarf3 }) {
+const ProductCustomization = React.forwardRef(
+  (
+    { header, paragarf1, paragarf2, paragarf3, toggleNismat, isOpenNismat },
+    ref,
+  ) => {
+    return (
+      <>
+        <div className="products-col-btn">
+          <button
+            onClick={toggleNismat}
+            className="products-butonat"
+            data-target="nismat-content"
+          >
+            <p>{header}</p>
+            <svg width="32" height="32" viewBox="0 0 24 24">
+              <path d="M15.78 11.28a.75.75 0 0 1 .22.53v.38a.77.77 0 0 1-.22.53l-5.14 5.13a.5.5 0 0 1-.71 0l-.71-.71a.49.49 0 0 1 0-.7L13.67 12 9.22 7.56a.5.5 0 0 1 0-.71l.71-.7a.5.5 0 0 1 .71 0Z"></path>
+            </svg>
+          </button>
+
+          {!isOpenNismat && (
+            <div
+              ref={ref}
+              style={{ display: isOpenNismat ? "none" : "block" }}
+              id="nismat-content"
+              className="toggle-section"
+            >
+              <div id="togle">
+                <label>
+                  {" "}
+                  <input type="checkbox" /> <p>{paragarf1}</p>{" "}
+                </label>
+                <label>
+                  {" "}
+                  <input type="checkbox" /> <p>{paragarf2}</p>{" "}
+                </label>
+                <label>
+                  {" "}
+                  <input type="checkbox" /> <p>{paragarf3}</p>{" "}
+                </label>
+              </div>
+            </div>
+          )}
+        </div>
+      </>
+    );
+  },
+);
+
+function TheksuarContent({
+  header,
+  paragarf1,
+  paragarf2,
+  toggleTheksuar,
+  isOpenTheksuar,
+}) {
   return (
     <>
       <div className="products-col-btn">
-        <button className="products-butonat" data-target="nismat-content">
+        <button
+          onClick={toggleTheksuar}
+          className="products-butonat"
+          data-target="theksuar-content"
+        >
           <p>{header}</p>
           <svg width="32" height="32" viewBox="0 0 24 24">
             <path d="M15.78 11.28a.75.75 0 0 1 .22.53v.38a.77.77 0 0 1-.22.53l-5.14 5.13a.5.5 0 0 1-.71 0l-.71-.71a.49.49 0 0 1 0-.7L13.67 12 9.22 7.56a.5.5 0 0 1 0-.71l.71-.7a.5.5 0 0 1 .71 0Z"></path>
           </svg>
         </button>
 
-        <div id="nismat-content" className="toggle-section">
-          <div id="togle">
-            <label>
-              {" "}
-              <input type="checkbox" /> <p>{paragarf1}</p>{" "}
-            </label>
-            <label>
-              {" "}
-              <input type="checkbox" /> <p>{paragarf2}</p>{" "}
-            </label>
-            <label>
-              {" "}
-              <input type="checkbox" /> <p>{paragarf3}</p>{" "}
-            </label>
+        {!isOpenTheksuar && (
+          <div id="theksuar-content" className="toggle-section">
+            <div>
+              <label>
+                {" "}
+                <input type="checkbox" />
+                <p>{paragarf1}</p>{" "}
+              </label>
+              <label>
+                {" "}
+                <input type="checkbox" />
+                <p>{paragarf2}</p>{" "}
+              </label>
+            </div>
           </div>
-        </div>
-      </div>
-    </>
-  );
-}
-
-function TheksuarContent({ header, paragarf1, paragarf2 }) {
-  return (
-    <>
-      <div className="products-col-btn">
-        <button className="products-butonat" data-target="theksuar-content">
-          <p>{header}</p>
-          <svg width="32" height="32" viewBox="0 0 24 24">
-            <path d="M15.78 11.28a.75.75 0 0 1 .22.53v.38a.77.77 0 0 1-.22.53l-5.14 5.13a.5.5 0 0 1-.71 0l-.71-.71a.49.49 0 0 1 0-.7L13.67 12 9.22 7.56a.5.5 0 0 1 0-.71l.71-.7a.5.5 0 0 1 .71 0Z"></path>
-          </svg>
-        </button>
-
-        <div id="theksuar-content" className="toggle-section">
-          <div>
-            <label>
-              {" "}
-              <input type="checkbox" />
-              <p>{paragarf1}</p>{" "}
-            </label>
-            <label>
-              {" "}
-              <input type="checkbox" />
-              <p>{paragarf2}</p>{" "}
-            </label>
-          </div>
-        </div>
+        )}
       </div>
     </>
   );
@@ -233,134 +339,154 @@ function RatingCopmonent({ header, paragraph }) {
   );
 }
 
-function Ngjyrat({header, argjendi, gri, ezeze, roze, blu, jeshile, kafe, gold}) {
-  return (
-  <>
-    <div className="products-col-btn">
-      <button className="products-butonat" data-target="color-content">
-        <p>{header}</p>
-        <svg width="32" height="32" viewBox="0 0 24 24">
-          <path d="M15.78 11.28a.75.75 0 0 1 .22.53v.38a.77.77 0 0 1-.22.53l-5.14 5.13a.5.5 0 0 1-.71 0l-.71-.71a.49.49 0 0 1 0-.7L13.67 12 9.22 7.56a.5.5 0 0 1 0-.71l.71-.7a.5.5 0 0 1 .71 0Z"></path>
-        </svg>
-      </button>
-      
-      <div id="color-content" className="toggle-section">
-        <div>
-          <div className="itemconfiguration">
-            <label>
-              {" "}
-              <input type="checkbox" />
-              <p>{argjendi}</p>{" "}
-            </label>
-            
-            <label>
-              {" "}
-              <input type="checkbox" />
-              <p>{gri}</p>{" "}
-            </label>
-            
-            <label>
-              {" "}
-              <input type="checkbox" />
-              <p>{ezeze}</p>{" "}
-            </label>
-            
-            <label>
-              {" "}
-              <input type="checkbox" />
-              <p>{roze}</p>{" "}
-            </label>
-            
-            <label>
-              {" "}
-              <input type="checkbox" />
-              <p>{blu}</p>{" "}
-            </label>
-            
-            <label>
-              {" "}
-              <input type="checkbox" />
-              <p>{jeshile}</p>{" "}
-            </label>
-            
-            <label>
-              {" "}
-              <input type="checkbox" />
-              <p>{kafe}</p>{" "}
-            </label>
-              
-            <label>
-              {" "}
-              <input type="checkbox" />
-              <p>{gold}</p>{" "}
-            </label>
-          </div>
-        </div>
-      </div>
-    </div>
-  </>
-)
-}
-
-function Telefonat({header, iphone, samsungGalaxy, xiaomi, google, onePlus, lG, sony, blackBerry}) {
+function Ngjyrat({
+  header,
+  argjendi,
+  gri,
+  ezeze,
+  roze,
+  blu,
+  jeshile,
+  kafe,
+  gold,
+}) {
   return (
     <>
-    <div className="products-col-btn">
-          <button className="products-butonat" data-target="telefonat">
-            <p>{header}</p>
-            <svg width="32" height="32" viewBox="0 0 24 24">
-              <path d="M15.78 11.28a.75.75 0 0 1 .22.53v.38a.77.77 0 0 1-.22.53l-5.14 5.13a.5.5 0 0 1-.71 0l-.71-.71a.49.49 0 0 1 0-.7L13.67 12 9.22 7.56a.5.5 0 0 1 0-.71l.71-.7a.5.5 0 0 1 .71 0Z"></path>
-            </svg>
-          </button>
-          <div id="telefonat" className="toggle-section">
-            <div>
-              <div className="itemconfiguration">
-                <label>
-                  {" "}
-                  <input type="checkbox" />
-                  <p>{iphone}</p>{" "}
-                </label>
-                <label>
-                  {" "}
-                  <input type="checkbox" />
-                  <p>{samsungGalaxy}</p>{" "}
-                </label>
-                <label>
-                  {" "}
-                  <input type="checkbox" />
-                  <p>{xiaomi}</p>{" "}
-                </label>
-                <label>
-                  {" "}
-                  <input type="checkbox" />
-                  <p>{google}</p>{" "}
-                </label>
-                <label>
-                  {" "}
-                  <input type="checkbox" />
-                  <p>{onePlus}</p>{" "}
-                </label>
-                <label>
-                  {" "}
-                  <input type="checkbox" />
-                  <p>{lG}</p>{" "}
-                </label>
-                <label>
-                  {" "}
-                  <input type="checkbox" />
-                  <p>{sony}</p>{" "}
-                </label>
-                <label>
-                  {" "}
-                  <input type="checkbox" />
-                  <p>{blackBerry}</p>{" "}
-                </label>
-              </div>
+      <div className="products-col-btn">
+        <button className="products-butonat" data-target="color-content">
+          <p>{header}</p>
+          <svg width="32" height="32" viewBox="0 0 24 24">
+            <path d="M15.78 11.28a.75.75 0 0 1 .22.53v.38a.77.77 0 0 1-.22.53l-5.14 5.13a.5.5 0 0 1-.71 0l-.71-.71a.49.49 0 0 1 0-.7L13.67 12 9.22 7.56a.5.5 0 0 1 0-.71l.71-.7a.5.5 0 0 1 .71 0Z"></path>
+          </svg>
+        </button>
+
+        <div id="color-content" className="toggle-section">
+          <div>
+            <div className="itemconfiguration">
+              <label>
+                {" "}
+                <input type="checkbox" />
+                <p>{argjendi}</p>{" "}
+              </label>
+
+              <label>
+                {" "}
+                <input type="checkbox" />
+                <p>{gri}</p>{" "}
+              </label>
+
+              <label>
+                {" "}
+                <input type="checkbox" />
+                <p>{ezeze}</p>{" "}
+              </label>
+
+              <label>
+                {" "}
+                <input type="checkbox" />
+                <p>{roze}</p>{" "}
+              </label>
+
+              <label>
+                {" "}
+                <input type="checkbox" />
+                <p>{blu}</p>{" "}
+              </label>
+
+              <label>
+                {" "}
+                <input type="checkbox" />
+                <p>{jeshile}</p>{" "}
+              </label>
+
+              <label>
+                {" "}
+                <input type="checkbox" />
+                <p>{kafe}</p>{" "}
+              </label>
+
+              <label>
+                {" "}
+                <input type="checkbox" />
+                <p>{gold}</p>{" "}
+              </label>
             </div>
           </div>
         </div>
+      </div>
     </>
-  )
+  );
+}
+
+function Telefonat({
+  header,
+  iphone,
+  samsungGalaxy,
+  xiaomi,
+  google,
+  onePlus,
+  lG,
+  sony,
+  blackBerry,
+}) {
+  return (
+    <>
+      <div className="products-col-btn">
+        <button className="products-butonat" data-target="telefonat">
+          <p>{header}</p>
+          <svg width="32" height="32" viewBox="0 0 24 24">
+            <path d="M15.78 11.28a.75.75 0 0 1 .22.53v.38a.77.77 0 0 1-.22.53l-5.14 5.13a.5.5 0 0 1-.71 0l-.71-.71a.49.49 0 0 1 0-.7L13.67 12 9.22 7.56a.5.5 0 0 1 0-.71l.71-.7a.5.5 0 0 1 .71 0Z"></path>
+          </svg>
+        </button>
+        <div id="telefonat" className="toggle-section">
+          <div>
+            <div className="itemconfiguration">
+              <label>
+                {" "}
+                <input type="checkbox" />
+                <p>{iphone}</p>{" "}
+              </label>
+              <label>
+                {" "}
+                <input type="checkbox" />
+                <p>{samsungGalaxy}</p>{" "}
+              </label>
+              <label>
+                {" "}
+                <input type="checkbox" />
+                <p>{xiaomi}</p>{" "}
+              </label>
+              <label>
+                {" "}
+                <input type="checkbox" />
+                <p>{google}</p>{" "}
+              </label>
+              <label>
+                {" "}
+                <input type="checkbox" />
+                <p>{onePlus}</p>{" "}
+              </label>
+              <label>
+                {" "}
+                <input type="checkbox" />
+                <p>{lG}</p>{" "}
+              </label>
+              <label>
+                {" "}
+                <input type="checkbox" />
+                <p>{sony}</p>{" "}
+              </label>
+              <label>
+                {" "}
+                <input type="checkbox" />
+                <p>{blackBerry}</p>{" "}
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
 
 export default AsideElement;

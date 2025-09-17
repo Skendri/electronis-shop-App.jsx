@@ -3,23 +3,23 @@ import './ProductCard.css'
 
 const ProductCard = () => {
   return (
-    <div style={{padding: "2rem 11%"}}>
+    <div style={{padding: "2rem 11%", display: 'flex', justifyContent: 'center'}}>
 
-      <div className="products-card">
-        <div className="products-card-majtas">
-          <div className="kartaMadhe-info kartaGjere-info">
+      <div className="home-products-card">
+        <div className="home-products-card-majtas">
+          <div className="home-kartaMadhe-info kartaGjere-info">
             <p>Ne dyqan dhe online</p>
           </div>
           
           <h3>Ore inteligjente XIAOMI Redmi Ora 3 aktive, e zeze</h3>
           
-          <div className="products-card-product">
+          <div className="home-products-card-product">
             <img 
               src="https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_107996820?x=320&y=320&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=320&ey=320&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=320&cdy=320" 
               alt="XIAOMI Redmi Watch 3 Active Black"
             />
             
-            <div className="informacioni-produktit">
+            <div className="home-informacioni-produktit">
               <p>Lloji i pajisjes:</p>
               <h4>SMARTWATCH</h4>
               
@@ -34,13 +34,13 @@ const ProductCard = () => {
             </div>
           </div>
           
-          <div className="products-card-reviewsIMG">
+          <div className="home-products-card-reviewsIMG">
             <span>⭐⭐⭐⭐⭐</span>
             <p>32</p>
           </div>
         </div>
         
-        <div className="products-card-djathtas">
+        <div className="home-products-card-djathtas">
           <h4>E rekomanduar 39.99 €</h4>
           <h3>34,99 €</h3>
           
@@ -50,7 +50,7 @@ const ProductCard = () => {
           
           <p>Eko-kontributi i TVSH dhe WEEE i perfshire</p>
           
-          <div className="opsionet-dorezimi">
+          <div className="home-opsionet-dorezimi">
             <h4>Ofrohet dorezimi <span>+2,99 €</span></h4>
             <p>
               Dorezimi i parashikuar 21.08.2024 - 23.08.2024
@@ -58,7 +58,7 @@ const ProductCard = () => {
             </p>
           </div>
           
-          <div className="opsionet-koleksioni-falas">
+          <div className="home-opsionet-koleksioni-falas">
             <h4>Koleksioni FALAS ne dyqan</h4>
             <p>
               Kontrolloni koleksionin ne dyqan 
@@ -66,7 +66,7 @@ const ProductCard = () => {
             </p>
           </div>
           
-          <div className="opsionet-shto-shporte">
+          <div className="home-opsionet-shto-shporte">
             <button>Shto ne Shporte</button>
             <button>
               <svg 

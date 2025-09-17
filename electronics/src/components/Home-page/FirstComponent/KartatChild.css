@@ -1,0 +1,54 @@
+.kartaMadhe-current {
+  width: 95%;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  border: solid 1px rgb(182, 182, 182);
+  border-radius: 1rem;
+  cursor: pointer;
+  scroll-snap-align: start;
+}
+
+.kartaMadhe-foto-current {
+  padding: 4px;
+}
+
+.kartaMadhe-foto-current > img {
+    width: 100%;
+}
+
+.kartaMadhe-kutiaInfos-current {
+  padding: 10px;
+  background-color: white;
+}
+
+.kartaMadhe-info-current {
+  display: flex;
+  gap: 5px;
+  padding: 0 10px;
+}
+
+.kartaMadhe-info-current > p {
+  border: 1px solid #007fa4;
+  border-radius: 1rem;
+  padding: 3px 25px;
+  font-size: 0.7rem;
+  color: rgb(53, 53, 53);
+}
+
+.kartaMadhe-infoDyte-current > p {
+  font-size: 1rem;
+  font-stretch: expanded;
+  color: rgb(53, 53, 53);
+}
+
+.kartaMadhe-infoDyte-current > h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.kartaMadhe-infoDyte-current > h3 {
+  font-weight: 900;
+  font-size: 1.6rem;
+  font-style: oblique;
+}

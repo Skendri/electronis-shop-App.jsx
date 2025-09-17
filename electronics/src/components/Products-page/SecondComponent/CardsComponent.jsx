@@ -1,12 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./CardsComponent.css";
 import CardData from "./CardData";
-console.log(CardData);
+import bannerImage from "../../../assets/images/kategori-banner-card.gif";
+console.log(bannerImage);
 
 const CardsComponent = () => {
   const displayProduct = CardData;
-  
-  console.log( "kto jane produktet e kart data" + displayProduct);
   
   return (
     <>
@@ -22,12 +21,16 @@ const CardsComponent = () => {
         text5={"Best Product"}  
         />
 
+           <img
+          className="kategori-banner-card"
+          src="https://img.freepik.com/premium-photo/box-with-ribbon-tied-around-it_337384-104388.jpg?w=1480"
+        />
+
         <img
           className="kategori-banner-card"
-          src="./images/kategori-banner-card.gif"
+          src={bannerImage}
         />
         {/* <!--                cartat e produkteve djathtas          --> */}
-        {/* <ProductCard CardData={CardData} /> */}
 
         {displayProduct.map((product, i) => (
           <ProductCard key={`${product.id} - ${i}`} product={product} />
@@ -42,7 +45,10 @@ const CardsComponent = () => {
   );
 };
 
+
 function ProductHeader({header, paragrafi, button, text1, text2, text3, text4, text5}) {
+    const [isTableVisible, setIsTableVisible] = useState(false);
+
     return (
         <>
         <div className="products-rrezultate">
@@ -50,22 +56,22 @@ function ProductHeader({header, paragrafi, button, text1, text2, text3, text4, t
                 <h3>{header}</h3>
                 <p><a href="#"> {paragrafi} </a></p>
             </div>
-            
+
             <div className="button-tabele">
-                <button id="toggleButton">
+                <button id="toggleButton" onClick={() => setIsTableVisible(!isTableVisible)}>
                     {" "}
                     {button}
                     <svg width="32" height="32" viewBox="0 0 24 24">
                         <path d="M15.78 11.28a.75.75 0 0 1 .22.53v.38a.77.77 0 0 1-.22.53l-5.14 5.13a.5.5 0 0 1-.71 0l-.71-.71a.49.49 0 0 1 0-.7L13.67 12 9.22 7.56a.5.5 0 0 1 0-.71l.71-.7a.5.5 0 0 1 .71 0Z"></path>
                     </svg>
                 </button>
-                
-                <div className="tabela">
-                    <p>{text1}</p>
-                    <p>{text2}</p>
-                    <p>{text3}</p>
-                    <p>{text4}</p>
-                    <p>{text5}</p>
+
+                <div className="tabela" style={{ display: isTableVisible ? 'block' : 'none' }}>
+                    <p className={isTableVisible ? "active" : "hover"}>{text4}</p>
+                    <p >{text1}</p>
+                    <p >{text2}</p>
+                    <p >{text3}</p>
+                    <p >{text5}</p>
                 </div>
             </div>
         </div>
@@ -73,6 +79,7 @@ function ProductHeader({header, paragrafi, button, text1, text2, text3, text4, t
     )
 }
 
+                    // Komponenti i kartave
 const ProductCard = ({product}) => {
   return (
     <>

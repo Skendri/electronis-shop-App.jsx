@@ -57,7 +57,7 @@ const NavPopUp = ({isopen}) => {
 
             <Link to="/Product" className="kategoriPopUp" onMouseEnter={() => handleMouseEnter(0)} onMouseLeave={handleMouseLeave}>Product page</Link>
         
-            <Link to="/" className="kategoriPopUp" onMouseEnter={() => handleMouseEnter(2)} onMouseLeave={handleMouseLeave}>Servisi jone</Link> 
+            <Link to="/Servisi" className="kategoriPopUp" onMouseEnter={() => handleMouseEnter(2)} onMouseLeave={handleMouseLeave}>Servisi jone</Link> 
             
             <Link to="/" className="kategoriPopUp" onMouseEnter={() => handleMouseEnter(3)} onMouseLeave={handleMouseLeave}>Suproti Klinetit</Link>
 

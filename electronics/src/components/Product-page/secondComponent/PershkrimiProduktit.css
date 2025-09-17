@@ -1,0 +1,27 @@
+.pershkrimi-produktit {
+  margin-bottom: 3%;
+}
+
+.pershkrimi-produktit > button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-radius: 3px;
+}
+.pershkrimi-produktit > button:hover {
+  background-color: rgb(221, 221, 221);
+}
+.pershkrimi-produktit svg {
+  rotate: 90deg;
+  padding: 0;
+  margin: 0;
+}
+.info-produktit {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}

@@ -4,15 +4,16 @@
 
 .naviLart {
   display: flex;
-  gap: 10px;
-  padding: 10px 11% 10px 11%;
+  gap: 3%;
+  padding: 15px 6% 0px 6%;
+  justify-content: center;
 }
 
 .naviLart>a {
   text-decoration: none;
   color: white;
   font-weight: 700;
-  font-size: 0.8rem;
+  font-size: 12px;
 }
 
 .naviLart>a:hover {
@@ -23,13 +24,14 @@
 .naviPosht {
   display: flex;
   align-items: center;
-  padding: 0 0 7px 11%;
-  gap: 2%;
+  justify-content: center;
+  gap: 4%;
+  padding: 10px 0;
 }
 
 .responsive-row {
   display: flex;
-  gap: 15px;
+  gap: 20px;
   align-items: center;
 }
 
@@ -38,8 +40,9 @@
 }
 
 .responsive-row img {
-  width: 100px;
-  height: 40px;
+  width: auto;
+  height: auto;
+  padding-right: 30px;
 }
 
 .navbarButoni {
@@ -91,10 +94,10 @@
 }
 
 .butoniDyqani {
-  display: flex;
+  width: 200px;
   align-items: center;
   cursor: pointer;
-  padding: 5px;
+  padding: 6px;
   background-color: transparent;
   border-radius: 7px;
   border: 2px solid;
@@ -103,6 +106,7 @@
 
 .butoniDyqani>span {
   font-weight: 200;
+  color: white;
   display: flex;
   flex-direction: column;
 }
@@ -114,7 +118,7 @@
 
 .butonatDjathtas {
   display: flex;
-  gap: 15px;
+  gap: 30px;
 }
 
 .butonatDjathtas>button,
@@ -138,7 +142,7 @@
   display: flex;
   justify-content: space-evenly;
   background-color: black;
-  padding: 12px;
+  padding: 16px;
 }
 
 .baneri-zi>a {
