@@ -5,6 +5,7 @@ import bannerImage from "../../../assets/images/kategori-banner-card.gif";
 console.log(bannerImage);
 
 const CardsComponent = () => {
+  
   const displayProduct = CardData;
   
   return (

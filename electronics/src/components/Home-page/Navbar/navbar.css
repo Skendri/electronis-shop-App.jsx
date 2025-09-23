@@ -40,7 +40,7 @@
 }
 
 .responsive-row img {
-  width: auto;
+  width: 75%;
   height: auto;
   padding-right: 30px;
 }
