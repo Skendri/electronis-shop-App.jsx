@@ -206,11 +206,7 @@ const SliderComponent = React.forwardRef(({ name, toggle, isOpen }, ref) => {
   );
 });
 
-const ProductCustomization = React.forwardRef(
-  (
-    { header, paragarf1, paragarf2, paragarf3, toggleNismat, isOpenNismat },
-    ref,
-  ) => {
+const ProductCustomization = React.forwardRef( ({ header, paragarf1, paragarf2, paragarf3, toggleNismat, isOpenNismat }, ref) => {
     return (
       <>
         <div className="products-col-btn">
