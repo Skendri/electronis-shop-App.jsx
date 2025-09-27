@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./CardsComponent.css";
 import CardData from "./CardData";
 import bannerImage from "../../../assets/images/kategori-banner-card.gif";
-console.log(bannerImage);
 
 const CardsComponent = () => {
   
@@ -21,16 +20,14 @@ const CardsComponent = () => {
         text4={"Best Product"}  
         text5={"Best Product"}  
         />
-
-           <img
+        
+        <img className="kategori-banner-card" src={bannerImage} />
+        
+        <img
           className="kategori-banner-card"
           src="https://img.freepik.com/premium-photo/box-with-ribbon-tied-around-it_337384-104388.jpg?w=1480"
         />
 
-        <img
-          className="kategori-banner-card"
-          src={bannerImage}
-        />
         {/* <!--                cartat e produkteve djathtas          --> */}
 
         {displayProduct.map((product, i) => (
