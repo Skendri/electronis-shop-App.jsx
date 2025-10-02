@@ -1,15 +1,9 @@
-
-.butonat-e-kontrolluesit > button:hover {
-  background-color: #616161;
+.mbeshtjellesi-gjere-kartave-klub {
+  padding: 0 14%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
 }
-
-.mbeshtjellesi-kartave, .seksioni-plani-pare {
-    padding: 0 7%;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-}
-
 
 #mbeshtjellesi-dyte-kartave-klub {
   margin-top: 3.5rem;
@@ -36,7 +30,7 @@
 
 #kartaGjere-infoPosht {
   display: inline-block;
-  margin-top: 20%;
+  margin-top: 10%;
   gap: 0px;
 }
 
@@ -55,15 +49,17 @@
   padding: 0% 2% 0 2%;
 }
 
-
-
-.butonat-e-kontrolluesit {
-  text-align: end;
-  padding: 20px 0;
-  margin-right: 2% ;
+.butonat-e-kontrolluesit-teGjere > button:hover {
+  background-color: #616161;
 }
 
-.butonat-e-kontrolluesit > button {
+.butonat-e-kontrolluesit-teGjere {
+  text-align: end;
+  padding: 20px 0;
+
+}
+
+.butonat-e-kontrolluesit-teGjere > button {
   padding: 8px 10px;
   border: none;
   border-radius: 5px;

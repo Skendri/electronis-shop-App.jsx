@@ -3,7 +3,7 @@ import './GlobeSector.css'
 
 const GlobeSector = () => {
   return (
-    <div style={{padding: '2rem 11%'}}>
+    <div style={{padding: '0 7%'}}>
       <div id="cdoSektor" className="Globe-grid">
         <div className="Globehoveri-servisi">
           <img 

@@ -3,7 +3,7 @@ import './ProductCard.css'
 
 const ProductCard = () => {
   return (
-    <div style={{padding: "2rem 11%", display: 'flex', justifyContent: 'center'}}>
+    <div style={{padding: "0 7%", display: 'flex', justifyContent: 'center'}}>
 
       <div className="home-products-card">
         <div className="home-products-card-majtas">
@@ -32,13 +32,20 @@ const ProductCard = () => {
               <p>Jetegjatesia e baterise:</p>
               <h4>288 ore</h4>
             </div>
+           
           </div>
+          
           
           <div className="home-products-card-reviewsIMG">
             <span>⭐⭐⭐⭐⭐</span>
             <p>32</p>
           </div>
         </div>
+
+
+         <div class="ribbon">Premium Product </div> 
+
+         
         
         <div className="home-products-card-djathtas">
           <h4>E rekomanduar 39.99 €</h4>
@@ -88,3 +95,6 @@ const ProductCard = () => {
 }
 
 export default ProductCard
+
+
+

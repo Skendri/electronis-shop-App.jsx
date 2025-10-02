@@ -20,10 +20,10 @@
   display: none;
 }
 
-.kartat-e-medha {
+.kartat-e-medha-ofertat {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: calc((98% / 3) - 1%);
+  grid-auto-columns: calc((95% / 3) - 1%);
   align-items: center;
   gap: 20px;
   overflow: hidden;

@@ -1,86 +1,5 @@
 
 
-/*-------------------- PRODUCTS DJATHTAS ---------------------*/
-.home-products-djathtas-container {
-  width: 100%;
-  padding: 0 0 0 4%;
-}
-
-.home-products-rrezultate {
-  display: flex;
-  align-items: center;
-  line-height: 0.3;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-}
-
-.home-products-rrezultate button {
-  display: flex;
-  align-items: center;
-  padding: 12px 20px;
-  background-color: transparent;
-  border: solid 2px dimgray;
-  border-radius: 7px;
-  cursor: pointer;
-}
-
-.home-products-rrezultate svg {
-  rotate: 90deg;
-}
-
-.home-products-rrezultate h3 {
-  font-size: 1.8rem;
-}
-
-.home-products-rrezultate p {
-  font-size: 1.2rem;
-}
-
-.home-products-rrezultate a {
-  text-decoration: underline;
-  color: #000000;
-}
-
-.home-button-tabele {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
-.home-tabela {
-  display: none; /* Hidden by default */
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 10px;
-  position: absolute; /* Positioned below the button */
-  min-width: 177px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  top: 60px;
-}
-
-.home-tabela p {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  height: 30px;
-}
-
-.home-tabela p.active {
-  background-color: #008bff;
-}
-
-.home-tabela p:hover {
-  background-color: #008bff;
-}
-
-.home-kategori-banner-card {
-  width: 100%;
-  border-radius: 15px;
-}
-
 .home-products-card-majtas {
   padding: 0;
   margin: 0;
@@ -98,7 +17,7 @@
 }
 
 .home-products-card-majtas {
-  width: 100%;
+  width: 50%;
 }
 
 .home-products-card-product {
@@ -107,7 +26,7 @@
 }
 
 .home-products-card-product > img {
-  width: 25%;
+  width: 35%;
 }
 
 .home-products-card-product > div {
@@ -115,37 +34,23 @@
   line-height: 0.4;
 }
 
-/*u shtuan per here te fundit*/
-.home-kartaMadhe-info {
-  display: flex;
-  gap: 5px;
-  padding: 0 10px;
+.ribbon {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  margin-right: 20px;
 }
-
-.home-kartaMadhe-info .kartaGjere-info  > p {
-  border: 3px solid #008bff;
-  border-radius: 1rem;
-  padding: 3px 5px;
-  font-size: 0.7rem;
-  color: rgb(53, 53, 53);
+.ribbon {
+  --r: 1.8em; /* control the cutout */
+  
+  border-inline: .5em solid #0000;
+  padding: 4.5em .2em calc(var(--r) + .2em);
+  clip-path: polygon(0 0,100% 0,100% 100%,calc(100% - .5em) 100%,50% calc(100% - var(--r)),.5em 100%,0 100%);
+  background:
+   radial-gradient(50% .2em at top,#000a,#0000) border-box,
+   #2699dc padding-box; /* the color  */
+  width: fit-content;
 }
-
-.home-kartaMadhe-infoDyte > p {
-  font-size: 1rem;
-  font-stretch: expanded;
-  color: rgb(53, 53, 53);
-}
-
-.home-kartaMadhe-infoDyte > h4 {
-  font-size: 0.9rem;
-  font-weight: 700;
-}
-
-.home-kartaMadhe-infoDyte > h3 {
-  font-weight: 900;
-  font-size: 1.6rem;
-  font-style: oblique;
-}   /*u shtuan per here te fundit*/
 
 .home-products-card-djathtas {
   line-height: 0;
