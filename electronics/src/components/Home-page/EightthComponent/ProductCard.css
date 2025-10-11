@@ -1,23 +1,17 @@
 
-
-.home-products-card-majtas {
-  padding: 0;
-  margin: 0;
-}
-
 .home-products-card {
   display: flex;
   width: 81.2%;
   height: auto;
-  overflow: hidden;
   border-radius: 10px;
-  padding: 10px 20px 10px 20px;
+  /* padding: 10px 20px 10px 20px; */
   margin: 4rem 0;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .home-products-card-majtas {
   width: 50%;
+  padding: 0px 0px 0px 15px;
 }
 
 .home-products-card-product {
@@ -34,11 +28,25 @@
   line-height: 0.4;
 }
 
+.home-kartaMadhe-info {
+  display: flex;
+  gap: 5px;
+  padding: 0 10px;
+}
+
+.home-kartaMadhe-info > p {
+  border: 3px solid #007fa4;
+  border-radius: 1rem;
+  padding: 3px 5px;
+  font-size: 0.7rem;
+  color: rgb(53, 53, 53);
+}
+
 .ribbon {
   font-size: 28px;
   font-weight: bold;
   color: #fff;
-  margin-right: 20px;
+  margin: 0px 10px 20px 0px;
 }
 .ribbon {
   --r: 1.8em; /* control the cutout */
@@ -47,14 +55,14 @@
   padding: 4.5em .2em calc(var(--r) + .2em);
   clip-path: polygon(0 0,100% 0,100% 100%,calc(100% - .5em) 100%,50% calc(100% - var(--r)),.5em 100%,0 100%);
   background:
-   radial-gradient(50% .2em at top,#000a,#0000) border-box,
+   radial-gradient(47% .5em at top,#000a,#0000) border-box,
    #2699dc padding-box; /* the color  */
   width: fit-content;
 }
 
 .home-products-card-djathtas {
   line-height: 0;
-  padding-top: 1rem;
+  padding: 0px 15px 0px 0px;
 }
 .home-products-card-djathtas a {
   line-height: normal;

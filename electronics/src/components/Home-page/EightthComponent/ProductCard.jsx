@@ -7,7 +7,7 @@ const ProductCard = () => {
 
       <div className="home-products-card">
         <div className="home-products-card-majtas">
-          <div className="home-kartaMadhe-info kartaGjere-info">
+          <div className="home-kartaMadhe-info">
             <p>Ne dyqan dhe online</p>
           </div>
           

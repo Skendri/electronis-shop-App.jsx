@@ -1,5 +1,6 @@
 import React from "react";
 import "./Section01.css";
+import SlideriKontentit from "./SlideriKontentit";
 
 const Section01 = () => {
   return (
@@ -34,39 +35,11 @@ const Section01 = () => {
             </p>
           </div>
           <h4>SMARTBAND XIAOMI MI SMART BAND 8 Active, Black</h4>
-          <div id="slideri-kontentit">
-            <div className="slideri-produktit-lart">
-              <button onclick="prevImg()">&lt;</button>
-              <img
-                src="https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_134805474?x=536&y=402&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=536&ey=402&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=536&cdy=402"
-                alt=""
-                id="slider-image"
-              />
-              <button onclick="nextImg()">&gt;</button>
-            </div>
-            <div className="slideri-produktit-posht">
-              <button onclick="prevImg()">&lt;</button>
-              <img
-                className="thumbnail"
-                src="https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_134805472?x=536&y=402&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=536&ey=402&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=536&cdy=402"
-                alt="image"
-                onclick="setImage(this)"
-              />
-              <img
-                className="thumbnail"
-                src="https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_134805473?x=536&y=402&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=536&ey=402&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=536&cdy=402"
-                alt="image"
-                onclick="setImage(this)"
-              />
-              <img
-                className="thumbnail"
-                src="https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_134805474?x=536&y=402&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=536&ey=402&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=536&cdy=402"
-                alt="image"
-                onclick="setImage(this)"
-              />
-              <button onclick="nextImg()">&gt;</button>
-            </div>
-          </div>
+
+          <SlideriKontentit />
+
+
+
         </div>
         <div className="opsionet-blerja-produktit">
           <p>
