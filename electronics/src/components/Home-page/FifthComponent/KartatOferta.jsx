@@ -150,10 +150,10 @@ const KartatOferta = () => {
   }, [next]);
 
   return (
-    <div style={{padding: '2rem 11%' }}>
+    <div style={{padding: '0 7%' }}>
 
       <div id="background-kartave-klub" className="backgroundi-karta-klub">
-        <div id="kartat-e-medha-klub" className="kartat-e-medha" ref={currentRef}>
+        <div id="kartat-e-medha-klub" className="kartat-e-medha-ofertat" ref={currentRef}>
 
           {cardInfo.map((card, index) => (
             <Karta key={index}

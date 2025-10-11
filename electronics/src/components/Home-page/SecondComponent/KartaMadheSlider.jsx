@@ -3,11 +3,12 @@ import './KartaMadheSlider.css';
 import { useState } from 'react';
 
 const KartaMadheSlider = () => {
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   const sliderRef = useRef(null);
   const cardsPerView = 1;
   const totalCards = 3;
-
-  const [currentIndex, setCurrentIndex] = useState(0);
 
   // Card data array
   const cardData = [
@@ -17,6 +18,7 @@ const KartaMadheSlider = () => {
       header1: "PSE TE ZGJIDHNI SAMSUNG AI PER SHTEPIN TUAJ?",
       header2: "PERFITO 10'000 LEKE ULJE!!",
       paragrafi3: "Per cdo blerje Samsung Galaxy Z FOLD6/ Z FLIP6 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis quos eum voluptatum molestias delectus",
+      paragrafi3dy: "Per cdo blerje Samsung Galaxy Z FOLD6/ Z FLIP6 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis quos eum voluptatum molestias delectus",
       paragrafi4: "Zgjidhni nga 12 deri ne 48 keste",
       img: "https://cms-images.mmst.eu/hzxov1nxpus5/1by1aTp4QJe7wvefpLJmRZ/21beef08ce8d290864871d4030a85671/MediaMarkt_Business__1_.jpg?q=70&fm=webp&w=730&h=410"
     },
@@ -26,6 +28,7 @@ const KartaMadheSlider = () => {
       header1: "PSE TE ZGJIDHNI SAMSUNG AI PER SHTEPIN TUAJ?",
       header2: "PERFITO 22'000 LEKE ULJE!!",
       paragrafi3: "Per cdo blerje Samsung Galaxy Z FOLD6/ Z FLIP6 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis quos eum voluptatum molestias delectus",
+      paragrafi3dy: "Per cdo blerje Samsung Galaxy Z FOLD6/ Z FLIP6 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis quos eum voluptatum molestias delectus",
       paragrafi4: "Zgjidhni nga 12 deri ne 48 keste",
       img: "https://cms-images.mmst.eu/hzxov1nxpus5/1by1aTp4QJe7wvefpLJmRZ/21beef08ce8d290864871d4030a85671/MediaMarkt_Business__1_.jpg?q=70&fm=webp&w=730&h=410"
     },
@@ -35,6 +38,7 @@ const KartaMadheSlider = () => {
       header1: "PSE TE ZGJIDHNI SAMSUNG AI PER SHTEPIN TUAJ?",
       header2: "PERFITO 30'000 LEKE ULJE!!",
       paragrafi3: "Per cdo blerje Samsung Galaxy Z FOLD6/ Z FLIP6 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis quos eum voluptatum molestias delectus",
+      paragrafi3dy: "Per cdo blerje Samsung Galaxy Z FOLD6/ Z FLIP6 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis quos eum voluptatum molestias delectus",
       paragrafi4: "Zgjidhni nga 12 deri ne 48 keste",
       img: "https://cms-images.mmst.eu/hzxov1nxpus5/1by1aTp4QJe7wvefpLJmRZ/21beef08ce8d290864871d4030a85671/MediaMarkt_Business__1_.jpg?q=70&fm=webp&w=730&h=410"
     }
@@ -43,6 +47,7 @@ const KartaMadheSlider = () => {
   function handleNext() {
     if (currentIndex < totalCards - cardsPerView) {
       setCurrentIndex(currentIndex + 1);
+      console.log( "llogaritja qe duhet",  currentIndex);
     }
     console.log("Next clicked by user");
   }
@@ -67,8 +72,8 @@ const KartaMadheSlider = () => {
   }, [currentIndex]);
 
   return (
-    <div style={{padding: '2rem 13%' }}>
-      <div id="mbeshtjellesi-gjere-kartave-klub" className="mbeshtjellesi-kartave">
+    <div style={{padding: '0 7%' }}>
+      <div id="mbeshtjellesi-gjere-kartave-klub" className="mbeshtjellesi-gjere-kartave-klub">
         <div id="kartat-e-gjera-klub" className="kartat-e-medha" ref={sliderRef}>
           {cardData.map((card, index) => (
             <Kartat
@@ -78,27 +83,28 @@ const KartaMadheSlider = () => {
               header1={card.header1}
               header2={card.header2}
               paragrafi3={card.paragrafi3}
+              paragrafi3dy={card.paragrafi3}
               paragrafi4={card.paragrafi4}
               img={card.img}
             />
           ))}
         </div>
-      </div>
+        <div id="butonat-e-kontrolluesit-teGjere-klub" className="butonat-e-kontrolluesit-teGjere">
+          <button onClick={handlePrev} id="majtas-kontrolluesi-gjere-klub" disabled={currentIndex === 0}>
+            <i className="fa-solid fa-chevron-left" />
+          </button>
+          <button onClick={handleNext} id="djathtas-kontrolluesi-gjere-klub" className="butonat-e-kontrolluesit-teGjere" disabled={currentIndex >= totalCards - cardsPerView}>
+            <i className="fa-solid fa-chevron-right" />
+          </button>
+        </div>
 
-      <div id="butonat-e-kontrolluesit-teGjere-klub" className="butonat-e-kontrolluesit">
-        <button onClick={handlePrev} id="majtas-kontrolluesi-gjere-klub" disabled={currentIndex === 0}>
-          <i className="fa-solid fa-chevron-left" />
-        </button>
-        <button onClick={handleNext} id="djathtas-kontrolluesi-gjere-klub" disabled={currentIndex >= totalCards - cardsPerView}>
-          <i className="fa-solid fa-chevron-right" />
-        </button>
       </div>
 
     </div>
   );
 };
 
-function Kartat({paragrafi1, paragrafi2, header1, header2, paragrafi3, paragrafi4, img}) {
+function Kartat({paragrafi1, paragrafi2, header1, header2, paragrafi3, paragrafi3dy, paragrafi4, img}) {
   return (
     <div id="kartaMadheID" className="kartaMadhe">
       <div className="kartaMadhe-kutiaInfos kartaGjere-kutia">
@@ -111,6 +117,7 @@ function Kartat({paragrafi1, paragrafi2, header1, header2, paragrafi3, paragrafi
           <h4>{header1}</h4>
           <h3>{header2}</h3>
           <p>{paragrafi3}</p>
+          <p>{paragrafi3dy}</p>
 
           <div className="kartaMadhe-info" id="kartaGjere-infoPosht">
             <p>{paragrafi4}</p>

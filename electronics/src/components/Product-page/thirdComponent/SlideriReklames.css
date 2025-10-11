@@ -10,7 +10,7 @@
 }
 
 .slider-container {
-  position: relative;
+  position: absolute;
   width: 500px;
   overflow: hidden;
   height: 300px;

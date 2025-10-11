@@ -39,8 +39,8 @@ const Slider = () => {
   }, [currentIndex]);
 
   return (
-    <div>
-      <section id="mbeshtjellesi-kartave" className="mbeshtjellesi-kartave">
+    <div style={{padding: '0 7%'}}>
+      <section id="mbeshtjellesi-kartave-slider" className="mbeshtjellesi-kartave-slider">
         <div id="kartat-e-medha-current" className="kartat-e-medha-current" ref={sliderRef}>
           <KartatSlide
             paragraf1={"Ne dyqan dhe online"}
@@ -154,18 +154,20 @@ const Slider = () => {
             img={"https://cms-images.mmst.eu/hzxov1nxpus5/278L0ptpEu27yrj4qm4yc6/b236a4aba8cfb8c25410d4a7ff9f26b1/visual-principale-lp-foldable-desk-centrato.jpg?q=70&fm=webp"}
           />
         </div>
-      </section>
 
-      {/* butonat e kontrrollit te sliderit */}
-      <section id="butonat-e-kontrolluesit" className="butonat-e-kontrolluesit">
-        <button onClick={handlePrev} id="majtas" disabled={currentIndex === 0}>
-          <i className="fa-solid fa-chevron-left"></i>
-        </button>
+                 {/* butonat e kontrrollit te sliderit */}
+        <section id="butonat-e-kontrolluesit-slideri" className="butonat-e-kontrolluesit-slideri">
+          <button onClick={handlePrev} id="majtas" disabled={currentIndex === 0}>
+            <i className="fa-solid fa-chevron-left"></i>
+          </button>
 
-        <button onClick={handleNext} id="djathtas" disabled={currentIndex >= totalCards - cardsPerView} >
-          <i className="fa-solid fa-chevron-right"></i>
-        </button>
+          <button onClick={handleNext} id="djathtas" disabled={currentIndex >= totalCards - cardsPerView} >
+            <i className="fa-solid fa-chevron-right"></i>
+          </button>
+        </section>
+
       </section>
+      
     </div>
   );
 };

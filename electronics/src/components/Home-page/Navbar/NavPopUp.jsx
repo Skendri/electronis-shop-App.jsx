@@ -15,7 +15,7 @@ const NavPopUp = ({isopen}) => {
   };
 
   return (
-    <div>
+    <div className='diviMAdh'>
       <ul
         onMouseEnter={() => handleMouseEnter(8)}
         onMouseLeave={handleMouseLeave}
