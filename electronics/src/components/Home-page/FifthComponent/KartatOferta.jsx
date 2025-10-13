@@ -112,7 +112,9 @@ const cardInfo = [
       paragrafi3: "Per cdo blerje Samsung Galaxy Z FOLD6/ Z FLIP6 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis quos eum voluptatum molestias delectus",
       paragrafi4: "Zgjidhni nga 12 deri ne 48 keste"
     },
-  ]
+  ];
+
+  
 
 const KartatOferta = () => {
 
@@ -151,7 +153,6 @@ const KartatOferta = () => {
 
   return (
     <div style={{padding: '0 7%' }}>
-
       <div id="background-kartave-klub" className="backgroundi-karta-klub">
         <div id="kartat-e-medha-klub" className="kartat-e-medha-ofertat" ref={currentRef}>
 
@@ -172,14 +173,14 @@ const KartatOferta = () => {
       </div>
             {/* <!-- BUTONAT E SLIDERIT --> */}
       <section id="butonat-e-kontrolluesit-klub" className="butonat-e-kontrolluesit">
-        <button onClick={handlePrev} id="majtas-klub"> <i className="fa-solid fa-chevron-left"></i> </button>
-        <button onClick={handleNext} id="djathtas-klub"> <i className="fa-solid fa-chevron-right"></i> </button>
+        <button onClick={handlePrev} id="majtas-klub" disabled={next === 0} > <i className="fa-solid fa-chevron-left"></i> </button>
+        <button onClick={handleNext} id="djathtas-klub" disabled={next >= totalCards - cardShowed} > <i className="fa-solid fa-chevron-right"></i> </button>
       </section>
-      
     </div>
     
   )
-}
+};
+
 
 // komponenti i funksionit
 

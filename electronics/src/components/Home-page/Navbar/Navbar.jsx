@@ -28,15 +28,9 @@ const Navbar = () => {
   
   {/*                   divi i perdes se zeze te popUpDyqani              */}
   <div id="perdja-zeze-zgjidhDyqani" className={`perdja-zeze-zgjidhDyqani ${butoniDyqani ? "hapPerdja-Zeze-ZgjidhDyqanin " : " perdja-zeze-zgjidhDyqani"} `} onClick={handleClick2}></div>
-  
-  
  <PopUpDyqani butoniDyqani={butoniDyqani}/>
-    
-    
     {/*                   divi i perdes se zeze te popUpi te gjitha kategorite              */}
     <div id="perdja-zeze" className={`perdja-zeze ${isopen ? "hapPopUpPerdja" : " perdja-zeze"} `} onClick={handleClick}></div>
-    
-  
 
     {/*        ketu nis komplet navbari              */}
   <div className="navi">
