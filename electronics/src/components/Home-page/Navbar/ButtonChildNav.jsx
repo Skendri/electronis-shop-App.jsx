@@ -7,7 +7,7 @@ const ButtonChildNav = ({paragraf, onClick}) => {
   return (
     <div>
         <button className="navbarButoni" onClick={onClick}>
-            <i className="fa-solid fa-bars"></i>
+            <i className={ paragraf === "Te gjithe katergorite" ? "fa-solid fa-bars" : "ph ph-caret-down"}></i>
             <p> {paragraf} </p>
         </button>
     </div>
