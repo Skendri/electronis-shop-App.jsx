@@ -1,7 +1,8 @@
 
 import React, { useState } from "react";
 import ButtonChild from "./ButtonChild";
-function SliderComponent({ name, toggle, isOpen }) {
+
+function SliderComponent() {
   const [visible, setVisible] = useState(false);
   const [minValue, setMinValue] = useState(0);
   const [maxValue, setMaxValue] = useState(200);

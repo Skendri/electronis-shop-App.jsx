@@ -1,0 +1,68 @@
+
+.perdja-zeze {
+  width: 100%;
+  height: 975px;
+  background: #1a1a1a;
+  overflow: hidden;
+  position: absolute;
+  opacity: 80%;
+  visibility: hidden;
+  opacity: 0;
+  top: 0px;
+}
+
+.hapPopUpMbeshtjellsi {
+  visibility: visible;
+  opacity: 1;
+  background-color: #3a86ff;
+  height: auto;
+  height: 94vh;
+}
+
+/* bacgroundi i zi te hapja e pop up-it */
+.hapPopUpPerdja {
+  visibility: visible;
+  opacity: 1;
+  opacity: 80%;
+}
+
+.perdja-zeze-zgjidhDyqani {
+  width: 99%;
+  height: 975px;
+  background: #1a1a1a;
+  overflow: hidden;
+  position: absolute;
+  opacity: 80%;
+  visibility: hidden;
+  opacity: 0;
+  top: 0px;
+  width: 100%;
+}
+
+.hapPerdja-Zeze-ZgjidhDyqanin {
+  visibility: visible;
+  opacity: 1;
+  opacity: 90%;
+}
+
+.hr-ZgjidhDyqanin {
+  margin-top: 100%;
+  color: rgb(229, 229, 229);
+}
+
+.dyqaniZgjedhur-btn {
+  font-size: 1rem;
+  font-weight: 600;
+  width: 25%;
+  padding: 19px 0;
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+  border: none;
+  float: right;
+}
+
+.hapPopUpZgjidhDyqanin {
+  visibility: visible;
+  opacity: 1;
+}
