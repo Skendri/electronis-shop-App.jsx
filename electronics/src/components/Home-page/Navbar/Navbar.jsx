@@ -5,8 +5,6 @@ import NavElem from './NavElem'
 
 
 const Navbar = ({isopen, butoniDyqani}) => {
-
-   
   
   return (
   <>

@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import ButtonChild from "./ButtonChild";
 
-function Ngjyrat({ header, argjendi, gri, ezeze, roze, blu, jeshile, kafe, gold, }) {
+function Ngjyrat({ argjendi, gri, ezeze, roze, blu, jeshile, kafe, gold, }) {
    const [visible, setVisible] = useState(false);
 
   return (
@@ -28,7 +28,7 @@ function Ngjyrat({ header, argjendi, gri, ezeze, roze, blu, jeshile, kafe, gold,
 
               <label>
                 {" "}
-                <input type="checkbox" />
+                <input type="checkbox" checked />
                 <p>{ezeze}</p>{" "}
               </label>
 

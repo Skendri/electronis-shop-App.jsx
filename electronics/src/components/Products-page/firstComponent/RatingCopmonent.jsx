@@ -21,7 +21,7 @@ function RatingCopmonent({ header, paragraph }) {
           <div>
             <label>
               {" "}
-              <input type="checkbox" /> &#11088; &#11088; &#11088; &#11088;
+              <input type="checkbox" checked /> &#11088; &#11088; &#11088; &#11088;
               &#11088; &#11088;{" "}
             </label>
             <label>
