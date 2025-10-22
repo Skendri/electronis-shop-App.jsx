@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./CardsComponent.css";
-import CardData from "./CardData";
+import CardData from "../../../Data/CardData";
 import bannerImage from "../../../assets/images/kategori-banner-card.gif";
 import SplitText from "./SplitText"
 
@@ -39,7 +39,7 @@ const CardsComponent = () => {
               />
             )}
           </div>
-        ))}
+        ))};
 
 
 

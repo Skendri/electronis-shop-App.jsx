@@ -67,9 +67,6 @@ const NavElem = () => {
           <button type="menu">
             <i className="fa-solid fa-user fa-flip"></i>
           </button>
-          <a href="#">
-            <i className="fa-solid fa-cart-shopping fa-bounce"></i>
-          </a>
         </div>
       </div>
     </div>
