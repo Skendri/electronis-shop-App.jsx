@@ -28,9 +28,8 @@ const CardsComponent = () => {
         <img className="kategori-banner-card" src={bannerImage} />
 
         {/* <!--                cartat e produkteve djathtas          --> */}
-
         {displayProduct.map((product, i) => (
-          <div key={`${product.id} - ${i}`}>
+          <div key={`${product.id === 2,4,6,8 ? "active" : "" } - ${i}`}>
             <ProductCard product={product} />
             {i === 3 && (
               <img
@@ -39,7 +38,7 @@ const CardsComponent = () => {
               />
             )}
           </div>
-        ))};
+        ))}
 
 
 
@@ -83,7 +82,7 @@ function ProductHeader({ header, paragrafi, button, text1, text2, text3, text4, 
             style={{ display: isTableVisible ? "block" : "none" }}
           >
             <p className={isTableVisible ? "active" : "hover"}>{text4}</p>
-            <p>{text1}</p>
+            <p >{text1}</p>
             <p>{text2}</p>
             <p>{text3}</p>
             <p>{text5}</p>
@@ -98,7 +97,7 @@ function ProductHeader({ header, paragrafi, button, text1, text2, text3, text4, 
 const ProductCard = ({ product }) => {
   return (
     <>
-      <div className="products-card">
+      <div className={`products-card ${product.id === 2 || product.id === 4 || product.id === 6 || product.id === 8 ? "active" : "" }`}>
         <div className="products-card-majtas">
           <div className="kartaMadhe-info">
             <p>{product.paragrafi1}</p>
