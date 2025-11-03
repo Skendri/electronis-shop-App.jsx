@@ -1,4 +1,5 @@
 
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import './App.css'
 import Home from './components/Home'
 import Product from './components/Product'
@@ -19,6 +20,7 @@ function App() {
       <Route path="/Servisi" element={<Servisi/>} />
       <Route path="/SuportiKlientit" element={<SuportiKlientit/>}/>
     </Routes>
+    <SpeedInsights/>
     </div>
   )
 }

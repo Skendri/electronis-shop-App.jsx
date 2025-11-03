@@ -11,18 +11,12 @@ const Slider = () => {
   const totalCards = 10;
 
   function handleNext(e) {
-    if (currentIndex < totalCards - cardsPerView) {
-      setCurrentIndex(currentIndex + 1);
-    } else {
-      setCurrentIndex(currentIndex);
-    }
+    setCurrentIndex(currentIndex + 1);
     console.log("handle next clicked by user", currentIndex + 1, e.target);
   }
 
   function handlePrev() {
-    if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
-    }
     console.log("handle prev clicked by user");
   }
 
@@ -35,6 +29,7 @@ const Slider = () => {
         left: scrollPosition,
         behavior: "smooth",
       });
+       console.log("ky eshte widthi i " + " " + cardWidth);
     }
   }, [currentIndex]);
 
@@ -161,7 +156,7 @@ const Slider = () => {
             <i className="fa-solid fa-chevron-left"></i>
           </button>
 
-          <button onClick={handleNext} id="djathtas" disabled={currentIndex >= totalCards - cardsPerView} >
+          <button onClick={handleNext} id="djathtas" disabled={currentIndex == totalCards - cardsPerView} >
             <i className="fa-solid fa-chevron-right"></i>
           </button>
         </section>
