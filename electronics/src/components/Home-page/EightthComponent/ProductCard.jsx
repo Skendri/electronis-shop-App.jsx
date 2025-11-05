@@ -5,7 +5,7 @@ const ProductCard = () => {
   return (
     <div style={{padding: "0 7%", display: 'flex', justifyContent: 'center'}}>
 
-      <div className={`home-products-card`}>
+      <div className="home-products-card">
         <div className="home-products-card-majtas">
           <div className="home-kartaMadhe-info">
             <p>Ne dyqan dhe online</p>
@@ -43,7 +43,7 @@ const ProductCard = () => {
         </div>
 
 
-         <div class="ribbon">Premium Product </div> 
+         <div className="ribbon">Premium Product </div> 
 
          
         
