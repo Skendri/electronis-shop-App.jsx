@@ -3,7 +3,7 @@ import './ProductCard.css'
 
 const ProductCard = () => {
   return (
-    <div style={{padding: "0 7%", display: 'flex', justifyContent: 'center', backgroundColor: 'red'}}>
+    <div style={{padding: "0 7%", display: 'flex', justifyContent: 'center'}}>
 
       <div className="home-products-card">
         <div className="home-products-card-majtas">
