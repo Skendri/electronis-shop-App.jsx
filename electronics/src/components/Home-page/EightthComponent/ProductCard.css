@@ -46,10 +46,8 @@
   font-weight: bold;
   color: #fff;
   margin: 0px 10px 20px 0px;
-}
-.ribbon {
   --r: 1.8em; /* control the cutout */
-  
+
   border-inline: .5em solid #0000;
   padding: 4.5em .2em calc(var(--r) + .2em);
   clip-path: polygon(0 0,100% 0,100% 100%,calc(100% - .5em) 100%,50% calc(100% - var(--r)),.5em 100%,0 100%);
