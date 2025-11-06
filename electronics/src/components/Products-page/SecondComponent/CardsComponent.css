@@ -72,17 +72,10 @@
   border-radius: 15px;
 }
 
-.products-card-majtas {
-  padding: 0;
-  margin: 0;
-}
-
 .products-card {
   display: flex;
   width: 96.2%;
-  overflow: hidden;
   height: 380px;
-  /*border: solid 2px #e8e8e8;*/
   border-radius: 10px;
   padding: 10px 20px 10px 20px;
   margin: 4rem 0;
@@ -90,12 +83,14 @@
 }
 
 .active {
-  display: flex;
   flex-direction: row-reverse;
+  display: flex;
 }
 
 .products-card-majtas {
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .products-card-product {

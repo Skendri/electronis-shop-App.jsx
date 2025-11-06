@@ -98,14 +98,14 @@ const ProductCard = ({ product }) => {
   return (
     <>
       <div className={`products-card ${product.id === 2 || product.id === 4 || product.id === 6 || product.id === 8 ? "active" : "" }`}>
-        <div className="products-card-majtas">
-          <div className="kartaMadhe-info">
+        <div className={`products-card-majtas ${product.id === 2 || product.id === 4 || product.id === 6 || product.id === 8 ? "active" : "" }`}>
+          <div className={`kartaMadhe-info ${product.id === 2 || product.id === 4 || product.id === 6 || product.id === 8 ? "active" : "" } `}>
             <p>{product.paragrafi1}</p>
           </div>
 
-          <h3>{product.header1}</h3>
+          <h3 className={`${product.id === 2 || product.id === 4 || product.id === 6 || product.id === 8 ? "active" : "" }`} >{product.header1}</h3>
 
-          <div className="products-card-product">
+          <div className={`products-card-product ${product.id === 2 || product.id === 4 || product.id === 6 || product.id === 8 ? "active" : "" } `}>
             <img src={product.img} alt={product.paragrafi1} />
 
             <div className="informacioni-produktit">
@@ -123,7 +123,7 @@ const ProductCard = ({ product }) => {
             </div>
           </div>
 
-          <div className="products-card-reviewsIMG">
+          <div className={`products-card-reviewsIMG ${product.id === 2 || product.id === 4 || product.id === 6 || product.id === 8 ? "active" : "" } `}>
             <span>{product.stars}</span>
             <p>{product.paragraphStars}</p>
           </div>
