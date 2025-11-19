@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState } from 'react';
 import React from 'react';
+import ProductCard from './ProductCardChild';
 import './SliderProduct.css'; // Assuming you have a CSS file for styling
 
 // Product data stored in the same file as requested
@@ -125,39 +126,6 @@ const productsData = [
     ecoText: "Eko-kontributi i TVSH dhe WEEE i perfshire"
   }
 ];
-
-// Reusable ProductCard component
-const ProductCard = ({ product }) => {
-  return (
-    <div className="karta-plan-pare">
-      <div className="plani-pare-siper">
-        <h4>{product.title}</h4>
-        <img
-          src={product.image}
-          alt={product.name}
-        />
-        <div className="reviews">
-          <img src={product.ratingImage} alt="starts" />
-          <p>{product.reviews}</p>
-        </div>
-        <p>{product.name}</p>
-      </div>
-
-      <div className="plani-pare-posht">
-        <p>
-          Rekomanduar €{product.originalPrice} <br />
-          <span className="cmimi">{product.currentPrice},-€</span>
-        </p>
-
-        <a href={product.infoLink}>
-          Informacion mbi: Financimi, Cmimi, Sasia, Koha e dorezimit dhe
-          Marrja
-        </a>
-        <p>{product.ecoText}</p>
-      </div>
-    </div>
-  );
-};
 
 
 function SliderProduct() {

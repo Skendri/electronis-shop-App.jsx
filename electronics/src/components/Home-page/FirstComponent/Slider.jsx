@@ -150,7 +150,7 @@ const Slider = () => {
           />
         </div>
 
-                 {/* butonat e kontrrollit te sliderit */}
+        {/* butonat e kontrrollit te sliderit */}
         <section id="butonat-e-kontrolluesit-slideri" className="butonat-e-kontrolluesit-slideri">
           <button onClick={handlePrev} id="majtas" disabled={currentIndex === 0}>
             <i className="fa-solid fa-chevron-left"></i>

@@ -2,48 +2,7 @@
   background-color: #3a86ff;
 }
 
-.naviLart {
-  display: flex;
-  gap: 3%;
-  padding: 15px 6% 0px 6%;
-  justify-content: center;
-}
-
-.naviLart>a {
-  text-decoration: none;
-  color: white;
-  font-weight: 700;
-  font-size: 12px;
-}
-
-.naviLart>a:hover {
-  text-decoration: underline white;
-}
-
 /* <!-- NAVI --> */
-.naviPosht {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4%;
-  padding: 10px 0;
-}
-
-.responsive-row {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.responsive-row a {
-  padding-top: 16px;
-}
-
-.responsive-row img {
-  width: 75%;
-  height: auto;
-  padding-right: 30px;
-}
 
 .navbarButoni {
   display: flex;
@@ -68,31 +27,6 @@
   color: white;
 }
 
-.navbarKerkimi {
-  display: flex;
-  background-color: white;
-  width: 40%;
-  border-radius: 8px;
-  padding: 15px;
-}
-
-.navbarKerkimi>input,
-.navbarKerkimi>input:focus {
-  width: 100%;
-  outline: none;
-}
-
-.navbarKerkimi>button,
-.navbarKerkimi>input {
-  background-color: white;
-  border: none;
-}
-
-.zgjidhDyqanin {
-  margin: 0;
-  padding: 0;
-}
-
 .butoniDyqani {
   width: 200px;
   align-items: center;
@@ -109,32 +43,6 @@
   color: white;
   display: flex;
   flex-direction: column;
-}
-
-.zgjidhDyqanin>p {
-  font-size: 0.8rem;
-  font-weight: 200;
-}
-
-.butonatDjathtas {
-  display: flex;
-  gap: 30px;
-}
-
-.butonatDjathtas>button,
-.butonatDjathtas>a {
-  border-radius: 100%;
-  border: none;
-  padding: 10px 15px;
-  text-decoration: none;
-  color: black;
-  font-size: 1.4rem;
-  font-weight: 900;
-  background-color: white;
-}
-
-.butonatDjathtas>a {
-  padding: 8px 15px;
 }
 
 /* <!-- BANERI ZI --> */
@@ -252,23 +160,7 @@
 
 /* POP UP BUTONI  */
 
- .mbeshtjellsi-gjithaKategorite {
-  position: absolute;
-  overflow: hidden;
-  margin: 0;
-  left: 0px;
-  top: 0px;
-  width: 15%;
-  height: 94vh;
-  padding: 30px;
-  color: rgb(39, 39, 39);
-  background-color: #f4f4f4;
-  border: none;
-  border-radius: 0 10px 10px 0;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.5s;
-}
+
 
 .listat-gjithaKategorite>h4 {
   margin: 15px 5px;
@@ -427,13 +319,6 @@
   border: solid 2px black;
   border-radius: 10px;
 }
-
-
-
-
-
-
-
 
 body {
   padding: 0;

@@ -1,6 +1,7 @@
 import logo from '../../../assets/images/amazon-logo-white.png'
 import { useState } from 'react'
 import { Link } from 'react-router-dom';
+import './NavPopUp.css'
 
 const NavPopUp = ({isopen}) => {
 
@@ -16,29 +17,6 @@ const NavPopUp = ({isopen}) => {
 
   return (
     <div className='diviMAdh'>
-      <ul
-        onMouseEnter={() => handleMouseEnter(8)}
-        onMouseLeave={handleMouseLeave}
-        className="kategori-GlobeShops-rekomandon" 
-        id="kategori-GlobeShops-rekomandonPopUp"
-        style={{
-          display: hoveredItem !== null ? 'block' : 'none',
-          boxShadow: '2px 2px 30px rgba(202, 200, 200, 1)',
-          transition: 'opacity 0.3s ease-in-out'
-        }}
-      >
-        
-        <p>GlobeShops Rekomandon</p>
-        
-        <li>Telefonia</li>
-        <li>Kompjuter dhe tableta</li>
-        <li>Pajisjet periferike dhe aksesoret</li>
-        <li>TV dhe kinema në shtëpi</li>
-        <li>Pajisje të mëdha</li>
-        <li>Pajisje të vogla dhe kafe</li>
-        <li>Kujdesi Personal</li>
-        <li>Audio, kufje dhe navigatorë</li> 
-      </ul>
     
       <div id="mbeshtjellsi-gjithaKategorite" className={`mbeshtjellsi-gjithaKategorite ${isopen ? 'hapPopUpMbeshtjellsi ' : ' '}`}>
         <div className="listat-gjithaKategorite">
@@ -72,6 +50,30 @@ const NavPopUp = ({isopen}) => {
 
         </div>
       </div>
+
+            <ul
+        onMouseEnter={() => handleMouseEnter(8)}
+        onMouseLeave={handleMouseLeave}
+        className="kategori-GlobeShops-rekomandon" 
+        id="kategori-GlobeShops-rekomandonPopUp"
+        style={{
+          display: hoveredItem !== null ? 'block' : 'none',
+          boxShadow: '2px 2px 30px rgba(202, 200, 200, 1)',
+          transition: 'opacity 0.3s ease-in-out'
+        }}
+      >
+        
+        <p>GlobeShops Rekomandon</p>
+        
+        <li>Telefonia</li>
+        <li>Kompjuter dhe tableta</li>
+        <li>Pajisjet periferike dhe aksesoret</li>
+        <li>TV dhe kinema në shtëpi</li>
+        <li>Pajisje të mëdha</li>
+        <li>Pajisje të vogla dhe kafe</li>
+        <li>Kujdesi Personal</li>
+        <li>Audio, kufje dhe navigatorë</li> 
+      </ul>
     </div>
   )
 }

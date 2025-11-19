@@ -215,6 +215,5 @@ const CardData =[
     span: "Zgjidh Dyqanin",
     shporta: "Shto ne shporte"
 },
-
 ]
 export default CardData;

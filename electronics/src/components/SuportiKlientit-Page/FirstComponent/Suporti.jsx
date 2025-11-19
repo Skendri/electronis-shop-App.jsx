@@ -1,4 +1,4 @@
-import React from 'react'
+import Carousel from '../Carousel'
 import './Suporti.css'
 
 const Suporti = () => {
@@ -25,27 +25,20 @@ const Suporti = () => {
         </div>
       </div>
     </div>
-    <div className="info">
-      <button id="prevBtn">&lt;</button>
-      <div className="mbeshtjellesi">
-        <div className="carousel" id="carousel">
-          <p className="text" id="lastClone">
-            Cilat janë kushtet e përgjithshme të shitjes në Globe?
-          </p>
-          <p className="text">
-            A është e mundur të bëhet një porosi me telefon?
-          </p>
-          <p className="text">A mund ta ndryshoj porosinë time më vonë?</p>
-          <p className="text">
-            Cilat janë kushtet e përgjithshme të shitjes në Globe?
-          </p>
-          <p className="text" id="firstClone">
-            A është e mundur të bëhet një porosi me telefon?
-          </p>
-        </div>
-      </div>
-      <button id="nextBtn">&gt;</button>
-    </div>
+    
+    <section className='section' data-reveal>
+      <h2>Carousel</h2>
+      <Carousel
+        items={[
+          <div className='card'><h3>Slide 1</h3><p className='muted'>Cilat janë kushtet e përgjithshme të shitjes në Amazon?</p></div>,
+          <div className='card'><h3>Slide 2</h3><p className='muted'>A është e mundur të bëhet një porosi me telefon?</p></div>,
+          <div className='card'><h3>Slide 3</h3><p className='muted'>A mund ta ndryshoj porosinë time më vonë?</p></div>,
+          <div className='card'><h3>Slide 4</h3><p className='muted'>Cilat janë kushtet e përgjithshme të shitjes në Globe?</p></div>,
+          <div className='card'><h3>Slide 5</h3><p className='muted'>A është e mundur të bëhet një porosi me telefon?</p></div>,
+        ]}
+      />
+    </section>
+
     <div className="divi-banerit">
       <h2>Pyetjet e bëra më shpesh</h2>
       <div className="baneri-dyte">

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import "./CardsComponent.css";
 import CardData from "../../../Data/CardData";
 import bannerImage from "../../../assets/images/kategori-banner-card.gif";
@@ -29,7 +30,11 @@ const CardsComponent = () => {
 
         {/* <!--                cartat e produkteve djathtas          --> */}
         {displayProduct.map((product, i) => (
-          <div key={`${product.id === 2,4,6,8 ? "active" : "" } - ${i}`}>
+          <motion.div key={`${product.id === 2,4,6,8 ? "active" : "" } - ${i}`}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: i * 0.2 }}
+            viewport={{ once: true }}>
             <ProductCard product={product} />
             {i === 3 && (
               <img
@@ -37,7 +42,7 @@ const CardsComponent = () => {
                 src="https://cms-images.mmst.eu/hzxov1nxpus5/iONRY5GwPN6LbTspzKJzS/16b63feb18b5eac64f1dc1e3bcabfbc2/Banner_MW_ESPORTA_Home_Teaser_Carousel_Orizz_Desk_1200x900.jpg?q=92&w=890"
               />
             )}
-          </div>
+          </motion.div>
         ))}
 
 

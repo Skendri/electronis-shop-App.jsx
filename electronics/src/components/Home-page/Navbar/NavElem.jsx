@@ -22,11 +22,10 @@ const NavElem = () => {
   return (
     <div>
       {/*                   divi i perdes se zeze te popUpi te gjitha kategorite              */}
-      <div
-        id="perdja-zeze"
-        className={`perdja-zeze ${isopen ? "hapPopUpPerdja" : " perdja-zeze"} `}
+      <div id="perdja-zeze" className={`perdja-zeze ${isopen ? "hapPopUpPerdja" : " perdja-zeze"} `}
         onClick={handleClick}
       ></div>
+      { /*        returni i componentit navelement          */}
       <div className="naviPosht" id="naviPosht">
         <div className="responsive-row">
           <Link to="/">

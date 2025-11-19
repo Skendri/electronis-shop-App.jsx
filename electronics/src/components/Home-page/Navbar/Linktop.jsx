@@ -1,12 +1,12 @@
 import React from 'react'
-import './navbar.css'
+import "../Navbar/Linktop.css"
 
 const Linktop = () => {
   return (
     <div>
         <div className="naviLart">
-            <a href="#">KLUB GlobeShops</a>
-            <a href="#">APP MediaWorld</a>
+            <a href="#">KLUB Amazon</a>
+            <a href="#">APP Amazon</a>
             <a href="#">Sherbimet</a>
             <a href="#">Qendrueshmeria</a>
             <a href="#">Dyqane</a>

@@ -1,0 +1,26 @@
+
+ .mbeshtjellsi-gjithaKategorite {
+  position: absolute;
+  overflow: hidden;
+  margin: 0;
+  left: 0px;
+  top: 0px;
+  width: 15%;
+  height: 94vh;
+  padding: 30px;
+  color: rgb(39, 39, 39);
+  background-color: #f4f4f4;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: 1s;
+}
+
+.hapPopUpMbeshtjellsi {
+  visibility: visible;
+  opacity: 1;
+  background-color: #3a86ff;
+  height: auto;
+  height: 94vh;
+}

@@ -1,28 +1,5 @@
 /* ----------------------- faqja e servisi.php ---------------------- */
 
-.seksioni1 {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.imazhi-seksionit1 {
-  border-radius: 20px;
-  width: 50%;
-}
-
-.seksioni1 div {
-  width: 50%;
-  font-size: 20px;
-}
-
-.seksioni1 div p {
-  color: rgb(85, 85, 85);
-}
-
-.info-servisi {
-  margin: 5pc 0;
-}
 
 /* component CountUp */
 .stats {
@@ -184,11 +161,169 @@
   color: #fff;
   transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease, transform 60ms ease;
   font-size: 14px;
-    padding: 10px 14px;
-    border-radius: 10px;
-    border: 1px solid transparent;
-    cursor: pointer;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.tertiary {
+  background: transparent;
+  color: #111827;
+  border-color: #11182722;
+  border-radius: 10px;
+}
+
+.tertiary:hover {
+  background: white;
+  color: #111827;
+  border-color: green;
+  border-radius: 10px;
 }
 /* Modal */
 
+
+/* Toasts */
+.toast-center {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 50;
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.container.dark .toast {
+  border-color: #ffffff14;
+  background: #0b1220;
+}
+
+.toast-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #2563eb;
+}
+
+.toast.success .toast-dot {
+  background: #16a34a;
+}
+
+.toast.info .toast-dot {
+  background: #2563eb;
+}
+
+.toast.error .toast-dot {
+  background: #dc2626;
+}
+/* Toasts */
+
+/* Inbox */
+
+.section {
+  margin-top: 24px;
+}
+
+.inbox {
+  margin-top: 12px;
+}
+
+.inbox-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.filters {
+  display: flex;
+  gap: 6px;
+}
+
+.chip {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 999px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.chip.active {
+  background: rgba(37, 99, 235, 0.14);
+  border-color: rgba(37, 99, 235, 0.3);
+}
+
+.container.dark .chip {
+  border-color: #ffffff14;
+  background: #111827;
+}
+
+.container.dark .chip.active {
+  background: rgba(37, 99, 235, 0.24);
+}
+
+.inbox-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inbox-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.inbox-item.read {
+  opacity: 0.8;
+}
+
+.container.dark .inbox-item {
+  border-color: #ffffff14;
+  background: #111827;
+}
+
+.inbox-item-main {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.inbox-item-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btnIndex.tertiary {
+  background: transparent;
+  color: #111827;
+  border-color: #11182722;
+}
+
+.btnIndex {
+  font-size: 14px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+/* Inbox */
 
