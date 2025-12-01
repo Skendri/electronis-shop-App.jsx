@@ -1,15 +1,16 @@
+
 import { useRef, useEffect, useState } from 'react';
-import React from 'react';
 import ProductCard from './ProductCardChild';
+import stars from '../../../assets/images/rating-35.png';
 import './SliderProduct.css'; // Assuming you have a CSS file for styling
 
-// Product data stored in the same file as requested
+
 const productsData = [
   {
     id: 1,
     title: "Top shites",
     image: "https://images.samsung.com/is/image/samsung/p6pim/al/sm-f741bzsgeuc/gallery/al-galaxy-zflip6-f741-sm-f741bzsgeuc-542935364?$684_547_JPG$",
-    ratingImage: "./images/rating-35.png",
+    ratingImage: stars,
     reviews: 200,
     name: "APPLE AirPods Gjenerata e 2-të me kuti karikimi (modeli 2019)",
     originalPrice: "979",
@@ -21,7 +22,7 @@ const productsData = [
     id: 2,
     title: "Top shites",
     image: "https://images.samsung.com/is/image/samsung/p6pim/al/sm-f741bzsgeuc/gallery/al-galaxy-zflip6-f741-sm-f741bzsgeuc-542935364?$684_547_JPG$",
-    ratingImage: "./images/rating-35.png",
+    ratingImage: stars,
     reviews: 200,
     name: "APPLE AirPods Gjenerata e 2-të me kuti karikimi (modeli 2019)",
     originalPrice: "979",
@@ -33,7 +34,7 @@ const productsData = [
     id: 3,
     title: "Top shites",
     image: "https://images.samsung.com/is/image/samsung/p6pim/al/sm-f741bzsgeuc/gallery/al-galaxy-zflip6-f741-sm-f741bzsgeuc-542935364?$684_547_JPG$",
-    ratingImage: "./images/rating-35.png",
+    ratingImage: stars,
     reviews: 200,
     name: "APPLE AirPods Gjenerata e 2-të me kuti karikimi (modeli 2019)",
     originalPrice: "979",
@@ -45,7 +46,7 @@ const productsData = [
     id: 4,
     title: "Top shites",
     image: "https://images.samsung.com/is/image/samsung/p6pim/al/sm-f741bzsgeuc/gallery/al-galaxy-zflip6-f741-sm-f741bzsgeuc-542935364?$684_547_JPG$",
-    ratingImage: "./images/rating-35.png",
+    ratingImage: stars,
     reviews: 200,
     name: "APPLE AirPods Gjenerata e 2-të me kuti karikimi (modeli 2019)",
     originalPrice: "979",
@@ -57,7 +58,7 @@ const productsData = [
     id: 5,
     title: "Top shites",
     image: "https://images.samsung.com/is/image/samsung/p6pim/al/sm-f741bzsgeuc/gallery/al-galaxy-zflip6-f741-sm-f741bzsgeuc-542935364?$684_547_JPG$",
-    ratingImage: "./images/rating-35.png",
+    ratingImage: stars,
     reviews: 200,
     name: "APPLE AirPods Gjenerata e 2-të me kuti karikimi (modeli 2019)",
     originalPrice: "979",
@@ -69,7 +70,7 @@ const productsData = [
     id: 6,
     title: "Top shites",
     image: "https://images.samsung.com/is/image/samsung/p6pim/al/sm-f741bzsgeuc/gallery/al-galaxy-zflip6-f741-sm-f741bzsgeuc-542935364?$684_547_JPG$",
-    ratingImage: "./images/rating-35.png",
+    ratingImage: stars,
     reviews: 200,
     name: "APPLE AirPods Gjenerata e 2-të me kuti karikimi (modeli 2019)",
     originalPrice: "979",
@@ -81,7 +82,7 @@ const productsData = [
     id: 7,
     title: "Top shites",
     image: "https://images.samsung.com/is/image/samsung/p6pim/al/sm-f741bzsgeuc/gallery/al-galaxy-zflip6-f741-sm-f741bzsgeuc-542935364?$684_547_JPG$",
-    ratingImage: "./images/rating-35.png",
+    ratingImage: stars,
     reviews: 200,
     name: "APPLE AirPods Gjenerata e 2-të me kuti karikimi (modeli 2019)",
     originalPrice: "979",
@@ -93,7 +94,7 @@ const productsData = [
     id: 8,
     title: "Top shites",
     image: "https://images.samsung.com/is/image/samsung/p6pim/al/sm-f741bzsgeuc/gallery/al-galaxy-zflip6-f741-sm-f741bzsgeuc-542935364?$684_547_JPG$",
-    ratingImage: "./images/rating-35.png",
+    ratingImage: stars,
     reviews: 200,
     name: "APPLE AirPods Gjenerata e 2-të me kuti karikimi (modeli 2019)",
     originalPrice: "979",
@@ -105,7 +106,7 @@ const productsData = [
     id: 9,
     title: "Top shites",
     image: "https://images.samsung.com/is/image/samsung/p6pim/al/sm-f741bzsgeuc/gallery/al-galaxy-zflip6-f741-sm-f741bzsgeuc-542935364?$684_547_JPG$",
-    ratingImage: "./images/rating-35.png",
+    ratingImage: stars,
     reviews: 200,
     name: "APPLE AirPods Gjenerata e 2-të me kuti karikimi (modeli 2019)",
     originalPrice: "979",
@@ -117,7 +118,7 @@ const productsData = [
     id: 10,
     title: "Top shites",
     image: "https://images.samsung.com/is/image/samsung/p6pim/al/sm-f741bzsgeuc/gallery/al-galaxy-zflip6-f741-sm-f741bzsgeuc-542935364?$684_547_JPG$",
-    ratingImage: "./images/rating-35.png",
+    ratingImage: stars,
     reviews: 200,
     name: "APPLE AirPods Gjenerata e 2-të me kuti karikimi (modeli 2019)",
     originalPrice: "979",

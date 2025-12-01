@@ -1,0 +1,1 @@
+eshte componenti child <BaneriMadh></BaneriMadh>

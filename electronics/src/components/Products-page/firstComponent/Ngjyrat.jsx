@@ -1,17 +1,23 @@
-
 import React, { useState } from "react";
 import ButtonChild from "./ButtonChild";
 
-function Ngjyrat({ argjendi, gri, ezeze, roze, blu, jeshile, kafe, gold, }) {
-   const [visible, setVisible] = useState(false);
+function Ngjyrat({ argjendi, gri, ezeze, roze, blu, jeshile, kafe, gold }) {
+  const [visible, setVisible] = useState(false);
 
   return (
     <>
       <div className="products-col-btn">
+        <ButtonChild
+          onClick={() => setVisible(!visible)}
+          header={"Ngjyrat"}
+          id={1}
+        />
 
-        <ButtonChild onClick={() => setVisible(!visible)} header={"Ngjyrat"} id={1} />
-
-        <div style={{display: !visible ? "block" : "none"}}  id="color-content" className="toggle-section">
+        <div
+          style={{ display: !visible ? "block" : "none" }}
+          id="color-content"
+          className="toggle-section"
+        >
           <div>
             <div className="itemconfiguration">
               <label>
@@ -67,6 +73,6 @@ function Ngjyrat({ argjendi, gri, ezeze, roze, blu, jeshile, kafe, gold, }) {
       </div>
     </>
   );
-};
+}
 
 export default Ngjyrat;

@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./Slider.css";
 import KartatSlide from "./KartatChild";
 import { useState, useRef, useEffect } from "react";
@@ -22,15 +22,16 @@ const Slider = () => {
 
   // Scroll to the appropriate position when currentIndex changes
   useEffect(() => {
-    if (sliderRef.current) {
+    if(sliderRef.current) {
       const cardWidth = sliderRef.current.scrollWidth / totalCards;
       const scrollPosition = currentIndex * cardWidth;
       sliderRef.current.scrollTo({
         left: scrollPosition,
         behavior: "smooth",
       });
-       console.log("ky eshte widthi i " + " " + cardWidth);
+       console.log("ky eshte widthi i" + " " + cardWidth);
     }
+    
   }, [currentIndex]);
 
   return (

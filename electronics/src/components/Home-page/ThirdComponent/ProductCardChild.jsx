@@ -1,6 +1,4 @@
 
-
-
 // Reusable ProductCard component
 const ProductCard = ({ product }) => {
   return (

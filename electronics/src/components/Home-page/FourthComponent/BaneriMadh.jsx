@@ -1,16 +1,16 @@
 import React from 'react'
 import './BaneriMadh.css'
 
-const BaneriMadh = () => {
+const BaneriMadh = ({header, paragraf, ahref}) => {
   return (
     <div>
         <section className="globe-klub-baner">
-            <h4>E-commerce Shops Klub</h4>
+            <h4> {header} </h4>
             <p>
-                Hyni ne nje bote shperblimesh dhe perfitimesh me programin e ri te besnikerise! Ju shperblejme menjehere dhe gjithnje e me shume. A nuk eshte e mrekullueshme?
+              {paragraf}
             </p>
             
-            <a href=""> Shperblejeni veten tani</a>
+            <a href="">{ahref}</a>
         </section>
     </div>
   )

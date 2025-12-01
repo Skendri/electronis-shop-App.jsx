@@ -6,10 +6,8 @@ import SliderProduct from '../components/Home-page/ThirdComponent/SliderProduct'
 import BaneriMadh from '../components/Home-page/FourthComponent/BaneriMadh'
 import KartatOferta from '../components/Home-page/FifthComponent/KartatOferta'
 import GlobeSector from '../components/Home-page/sixthCopmonent/GlobeSector'
-import BaneriBlu2 from '../components/Home-page/SeventhComponent/baneriBlu2'
 import ProductCard from '../components/Home-page/EightthComponent/ProductCard'
 import ItemsCategory from '../components/Home-page/NinthComponent/ItemsCategory'
-import BaneriBlu3 from '../components/Home-page/TenthComponent/BaneriBlu3'
 import Cards from '../components/Home-page/ElevenComponent/Cards'
 import CardsInfo from '../components/Home-page/TwelveComponent/CardsInfo'
 import Footer from '../components/Home-page/Footer/Footer'
@@ -21,13 +19,13 @@ const Home = () => {
         <Slider />
         <KartaMadheSlider />
         <SliderProduct />
-        <BaneriMadh />
+        <BaneriMadh header={"E-commerce Shops Klub"} paragraf={" Hyni ne nje bote shperblimesh dhe perfitimesh me programin e ri te besnikerise! Ju shperblejme menjehere dhe gjithnje e me shume. A nuk eshte e mrekullueshme?"} ahref={" Shperblejeni veten tani"}/>
         <KartatOferta />
         <GlobeSector/>
-        <BaneriBlu2/>
+        <BaneriMadh header={"Shërbimet E-commerceShops të krijuara për ju!"} ahref={" Shperblejeni veten tani"}/>
         <ProductCard />
         <ItemsCategory />
-        <BaneriBlu3 />
+        <BaneriMadh header={"Gjeni produktin me te pershtatshem me Asistent tane Digjitale"} ahref={"Zbuloni me shume"} />
         <Cards />
         <CardsInfo />
         <Footer/>
