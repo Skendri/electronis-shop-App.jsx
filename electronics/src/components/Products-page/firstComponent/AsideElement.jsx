@@ -47,7 +47,6 @@ const AsideElement = () => {
         <hr />
 
         <Telefonat
-          header={"Telefonat"}
           iphone={"Iphone"}
           samsungGalaxy={"Samsung Galaxy"}
           xiaomi={"Xiaomi"}

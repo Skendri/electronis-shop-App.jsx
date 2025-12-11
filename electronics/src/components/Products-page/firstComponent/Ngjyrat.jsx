@@ -3,6 +3,11 @@ import ButtonChild from "./ButtonChild";
 
 function Ngjyrat({ argjendi, gri, ezeze, roze, blu, jeshile, kafe, gold }) {
   const [visible, setVisible] = useState(false);
+  const [active, setActive] = useState(true);
+
+  function handleOnChange() {
+    setActive(!active)
+  }
 
   return (
     <>
@@ -34,7 +39,7 @@ function Ngjyrat({ argjendi, gri, ezeze, roze, blu, jeshile, kafe, gold }) {
 
               <label>
                 {" "}
-                <input type="checkbox" checked />
+                <input type="checkbox" checked onChange={handleOnChange} />
                 <p>{ezeze}</p>{" "}
               </label>
 

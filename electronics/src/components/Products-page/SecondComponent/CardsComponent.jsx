@@ -35,6 +35,7 @@ const CardsComponent = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: i * 0.2 }}
             viewport={{ once: true }}>
+              
             <ProductCard product={product} />
             {i === 3 && (
               <img
@@ -77,17 +78,14 @@ function ProductHeader({ header, paragrafi, button, text1, text2, text3, text4, 
           >
             {" "}
             {button}
-            <svg width="32" height="32" viewBox="0 0 24 24">
+            <svg width="32" height="32" viewBox="0 0 24 24"  style={{ transform: isTableVisible ? "rotate(-270deg)" : "rotate(0deg)", transition: "0.3s ease", }} >
               <path d="M15.78 11.28a.75.75 0 0 1 .22.53v.38a.77.77 0 0 1-.22.53l-5.14 5.13a.5.5 0 0 1-.71 0l-.71-.71a.49.49 0 0 1 0-.7L13.67 12 9.22 7.56a.5.5 0 0 1 0-.71l.71-.7a.5.5 0 0 1 .71 0Z"></path>
             </svg>
           </button>
 
-          <div
-            className="tabela"
-            style={{ display: isTableVisible ? "block" : "none" }}
-          >
-            <p className={isTableVisible ? "active" : "hover"}>{text4}</p>
-            <p >{text1}</p>
+          <div className="tabela" style={{ display: isTableVisible ? "block" : "none" }}>
+            <p>{text4}</p>
+            <p>{text1}</p>
             <p>{text2}</p>
             <p>{text3}</p>
             <p>{text5}</p>
