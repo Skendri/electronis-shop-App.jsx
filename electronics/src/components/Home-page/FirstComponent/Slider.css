@@ -29,20 +29,3 @@
   text-decoration: none;
   color: black;
 }
-
-.butonat-e-kontrolluesit-slideri {
-  text-align: end;
-  padding: 20px 0;
-  /* margin-right: 2% ; */
-}
-
-.butonat-e-kontrolluesit-slideri > button {
-  padding: 8px 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.butonat-e-kontrolluesit-slideri > button:hover {
-  background-color: #616161;
-}

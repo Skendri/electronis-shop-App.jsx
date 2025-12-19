@@ -4,16 +4,15 @@ import logo from "../../../assets/images/amazon-logo-white.png";
 import NavPopUp from "./NavPopUp";
 import PopUpDyqani from "./PopUpDyqani";
 import { useState } from "react";
-import "./navElem.css"
+import "./navElem.css";
 
 const NavElem = () => {
   const [isopen, setIsOpen] = useState(false);
+  const [butoniDyqani, setButoniDyqani] = useState(false);
 
   function handleClick() {
     setIsOpen(!isopen);
   }
-
-  const [butoniDyqani, setButoniDyqani] = useState(false);
 
   function handleClick2() {
     setButoniDyqani(!butoniDyqani);
@@ -22,10 +21,12 @@ const NavElem = () => {
   return (
     <div>
       {/*                   divi i perdes se zeze te popUpi te gjitha kategorite              */}
-      <div id="perdja-zeze" className={`perdja-zeze ${isopen ? "hapPopUpPerdja" : " perdja-zeze"} `}
+      <div
+        id="perdja-zeze"
+        className={`perdja-zeze ${isopen ? "hapPopUpPerdja" : " perdja-zeze"} `}
         onClick={handleClick}
       ></div>
-      { /*        returni i componentit navelement          */}
+      {/*        returni i componentit navelement          */}
       <div className="naviPosht" id="naviPosht">
         <div className="responsive-row">
           <Link to="/">

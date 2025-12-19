@@ -2,8 +2,6 @@ import React from 'react'
 
 const ButtonChildNav = ({paragraf, onClick}) => {
 
-
-
   return (
     <div>
         <button className="navbarButoni" onClick={onClick}>

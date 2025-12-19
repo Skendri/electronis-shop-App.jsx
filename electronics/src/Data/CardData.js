@@ -1,3 +1,6 @@
+
+// datat e cardsComponent te folderi Products-pages
+
 const CardData =[ 
 {
     id: 1,

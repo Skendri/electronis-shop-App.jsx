@@ -116,6 +116,12 @@
   width: 75%;
   height: auto;
   padding-right: 30px;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.responsive-row img:hover {
+  filter: drop-shadow(0 0 1em #f8fafaaa);
 }
 
 .navbarKerkimi {
