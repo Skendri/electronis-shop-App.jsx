@@ -21,7 +21,7 @@ function ProductCustomization({ paragarf1, paragarf2, paragarf3, isOpenNismat })
               <div id="togle">
                 <label>
                   {" "}
-                  <input type="checkbox" checked /> <p>{paragarf1}</p>{" "}
+                  <input type="checkbox" /> <p>{paragarf1}</p>{" "}
                 </label>
                 <label>
                   {" "}

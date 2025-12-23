@@ -1,4 +1,4 @@
-import React from "react";
+import './PopUpDyqani.css'
 
 const PopUpDyqani = ({ butoniDyqani }) => {
   return (
@@ -9,7 +9,7 @@ const PopUpDyqani = ({ butoniDyqani }) => {
       >
         <div className="ZgjidhDyqanin-Popup">
           <p>Zgjidhni dyqanin</p>
-          <button onClick={""}>
+          <button>
             <i className="ph ph-x"></i>
           </button>
         </div>

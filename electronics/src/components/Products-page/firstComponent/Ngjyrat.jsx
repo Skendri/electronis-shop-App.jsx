@@ -39,7 +39,7 @@ function Ngjyrat({ argjendi, gri, ezeze, roze, blu, jeshile, kafe, gold }) {
 
               <label>
                 {" "}
-                <input type="checkbox" checked onChange={handleOnChange} />
+                <input type="checkbox"  onChange={handleOnChange} />
                 <p>{ezeze}</p>{" "}
               </label>
 

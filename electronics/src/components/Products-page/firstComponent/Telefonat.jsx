@@ -19,7 +19,7 @@ function Telefonat({ iphone, samsungGalaxy, xiaomi, google, onePlus, lG, sony, b
               </label>
               <label>
                 {" "}
-                <input type="checkbox" checked />
+                <input type="checkbox" />
                 <p>{samsungGalaxy}</p>{" "}
               </label>
               <label>

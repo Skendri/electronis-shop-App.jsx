@@ -16,7 +16,7 @@ function TheksuarContent({paragarf1, paragarf2, isOpenTheksuar}) {
             <div>
               <label>
                 {" "}
-                <input type="checkbox" checked />
+                <input type="checkbox"  />
                 <p>{paragarf1}</p>{" "}
               </label>
               <label>

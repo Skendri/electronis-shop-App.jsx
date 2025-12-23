@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./CardsComponent.css";
 import CardData from "../../../Data/CardData";
+import ProductCard from "./ProductCard";
+import ProductHeader from "./ProductHeader";
 import bannerImage from "../../../assets/images/kategori-banner-card.gif";
 import SplitText from "./SplitText"
 
@@ -57,128 +59,8 @@ const CardsComponent = () => {
   );
 };
 
-function ProductHeader({ header, paragrafi, button, text1, text2, text3, text4, text5, }) {
-  
-  const [isTableVisible, setIsTableVisible] = useState(false);
 
-  return (
-    <>
-      <div className="products-rrezultate">
-        <div>
-          <h3>{header}</h3>
-          <p>
-            <a href="#"> {paragrafi} </a>
-          </p>
-        </div>
 
-        <div className="button-tabele">
-          <button
-            id="toggleButton"
-            onClick={() => setIsTableVisible(!isTableVisible)}
-          >
-            {" "}
-            {button}
-            <svg width="32" height="32" viewBox="0 0 24 24"  style={{ transform: isTableVisible ? "rotate(-270deg)" : "rotate(0deg)", transition: "0.3s ease", }} >
-              <path d="M15.78 11.28a.75.75 0 0 1 .22.53v.38a.77.77 0 0 1-.22.53l-5.14 5.13a.5.5 0 0 1-.71 0l-.71-.71a.49.49 0 0 1 0-.7L13.67 12 9.22 7.56a.5.5 0 0 1 0-.71l.71-.7a.5.5 0 0 1 .71 0Z"></path>
-            </svg>
-          </button>
 
-          <div className="tabela" style={{ display: isTableVisible ? "block" : "none" }}>
-            <p>{text4}</p>
-            <p>{text1}</p>
-            <p>{text2}</p>
-            <p>{text3}</p>
-            <p>{text5}</p>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
-
-// Komponenti i kartave
-const ProductCard = ({ product }) => {
-  return (
-    <>
-      <div className={`products-card ${product.id === 2 || product.id === 4 || product.id === 6 || product.id === 8 ? "active" : "" }`}>
-        <div className={`products-card-majtas ${product.id === 2 || product.id === 4 || product.id === 6 || product.id === 8 ? "active" : "" }`}>
-          <div className={`kartaMadhe-info ${product.id === 2 || product.id === 4 || product.id === 6 || product.id === 8 ? "active" : "" } `}>
-            <p>{product.paragrafi1}</p>
-          </div>
-
-          <h3 className={`${product.id === 2 || product.id === 4 || product.id === 6 || product.id === 8 ? "active" : "" }`} >{product.header1}</h3>
-
-          <div className={`products-card-product ${product.id === 2 || product.id === 4 || product.id === 6 || product.id === 8 ? "active" : "" } `}>
-            <img src={product.img} alt={product.paragrafi1} />
-
-            <div className="informacioni-produktit">
-              <p>{product.llojiPaisjes}</p>
-              <h4>{product.paisja}</h4>
-
-              <p>{product.sistemiOperativ}</p>
-              <h4>-</h4>
-
-              <p>{product.sensori}</p>
-              <h4>{product.sensoriInfo}</h4>
-
-              <p>{product.bateri}</p>
-              <h4>{product.bateriinfo}</h4>
-            </div>
-          </div>
-
-          <div className={`products-card-reviewsIMG ${product.id === 2 || product.id === 4 || product.id === 6 || product.id === 8 ? "active" : "" } `}>
-            <span>{product.stars}</span>
-            <p>{product.paragraphStars}</p>
-          </div>
-        </div>
-
-        <div className="products-card-djathtas">
-          <h4>{product.cmimiRekomandim}</h4>
-          <h3>{product.cmimi}</h3>
-
-          <a href="#">{product.link}</a>
-
-          <p>{product.kontributi}</p>
-
-          <div className="opsionet-dorezimi">
-            <h4>
-              {product.opsionetDorezimi}{" "}
-              <span>{product.opsionetDorezimi2}</span>
-            </h4>
-            <p>{product.opsionetDorezimi3}</p>
-          </div>
-
-          <div className="opsionet-koleksioni-falas">
-            <h4>{product.koleksioni}</h4>
-            <p>
-              {product.kontrollKolkesioni}
-              <span>
-                {product.span} {">"}
-              </span>
-            </p>
-          </div>
-
-          <div className="opsionet-shto-shporte">
-            <button id={product.id}>
-              {" "}
-              {product.id} {product.shporta}
-            </button>
-            <button>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                fill="#000000"
-                viewBox="0 0 256 256"
-              >
-                <path d="M178,40c-20.65,0-38.73,8.88-50,23.89C116.73,48.88,98.65,40,78,40a62.07,62.07,0,0,0-62,62c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,228.66,240,172,240,102A62.07,62.07,0,0,0,178,40ZM128,214.8C109.74,204.16,32,155.69,32,102A46.06,46.06,0,0,1,78,56c19.45,0,35.78,10.36,42.6,27a8,8,0,0,0,14.8,0c6.82-16.67,23.15-27,42.6-27a46.06,46.06,0,0,1,46,46C224,155.61,146.24,204.15,128,214.8Z" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
 
 export default CardsComponent;

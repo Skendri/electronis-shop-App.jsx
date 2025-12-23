@@ -1,0 +1,61 @@
+.products-rrezultate {
+  display: flex;
+  align-items: center;
+  line-height: 0.3;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.products-rrezultate button {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: transparent;
+  border: solid 2px dimgray;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.products-rrezultate h3 {
+  font-size: 1.8rem;
+}
+.products-rrezultate p {
+  font-size: 1.2rem;
+}
+.products-rrezultate a {
+  text-decoration: underline;
+  color: #000000;
+}
+
+.button-tabele {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.tabela {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  position: absolute; /* Positioned below the button */
+  min-width: 177px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  top: 60px;
+}
+
+.tabela p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 30px;
+}
+
+.tabela p.active {
+  background-color: #008bff;
+}
+
+.tabela p:hover {
+  background-color: #008bff;
+}
