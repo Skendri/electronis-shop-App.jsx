@@ -4,11 +4,13 @@ import logo from "../../../assets/images/amazon-logo-white.png";
 import NavPopUp from "./NavPopUp";
 import PopUpDyqani from "./PopUpDyqani";
 import { useState } from "react";
+import { useCart } from "../../../contexts/CartContext";
 import "./navElem.css";
 
 const NavElem = () => {
   const [isopen, setIsOpen] = useState(false);
   const [butoniDyqani, setButoniDyqani] = useState(false);
+  const { getTotalItems } = useCart();
 
   function handleClick() {
     setIsOpen(!isopen);
@@ -17,6 +19,8 @@ const NavElem = () => {
   function handleClick2() {
     setButoniDyqani(!butoniDyqani);
   }
+
+  const totalItems = getTotalItems();
 
   return (
     <div>
@@ -48,7 +52,7 @@ const NavElem = () => {
             name="search"
           />
         </div>
-        {/*                   divi i perdes se zeze te popUpDyqani              */}
+        {/*                   divi i perdes se zeze te popUpDyqani (cart)             */}
         <div
           id="perdja-zeze-zgjidhDyqani"
           className={`perdja-zeze-zgjidhDyqani ${butoniDyqani ? "hapPerdja-Zeze-ZgjidhDyqanin " : " perdja-zeze-zgjidhDyqani"} `}
@@ -56,9 +60,11 @@ const NavElem = () => {
         ></div>
         <div className="zgjidhDyqanin">
           <ButtonChildNav
-            paragraf={"Zgjidhni Dyqanin"}
+            paragraf={`Shporta (${totalItems})`}
             onClick={handleClick2}
             butoniDyqani={butoniDyqani}
+            showCartIcon={true}
+            itemCount={totalItems}
           />
           <PopUpDyqani butoniDyqani={butoniDyqani} />
         </div>

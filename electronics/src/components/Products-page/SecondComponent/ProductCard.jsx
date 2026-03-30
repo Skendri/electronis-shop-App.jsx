@@ -1,8 +1,17 @@
 
 import './ProductCard.css';
+import { useCart } from '../../../contexts/CartContext';
 
 // Komponenti i kartave
 const ProductCard = ({ product }) => {
+  const { addToCart } = useCart();
+
+  const handleAddToCart = () => {
+    addToCart(product);
+    // Optional: Show a success message or animation
+    console.log('Product added to cart:', product.paisja);
+  };
+
   return (
     <>
       <div className={`products-card ${product.id === 2 || product.id === 4 || product.id === 6 || product.id === 8 ? "active" : "" }`}>
@@ -64,9 +73,11 @@ const ProductCard = ({ product }) => {
           </div>
 
           <div className="opsionet-shto-shporte">
-            <button id={product.id}>
-              {" "}
-              {product.id} {product.shporta}
+            <button 
+              onClick={handleAddToCart}
+              className="add-to-cart-btn"
+            >
+              Shto në Shportë
             </button>
             <button>
               <svg

@@ -7,21 +7,23 @@ import Products from './components/Products'
 import Servisi from './components/Servisi'
 import SuportiKlientit from './components/SuportiKlientit'
 import {  Route, Routes } from 'react-router-dom'
-
+import { CartProvider } from './contexts/CartContext'
 
 function App() {
 
   return (
-    <div>
-    <Routes>
-      <Route path='/' element={<Home/>}/>
-      <Route path="/Products" element={<Products/>} />
-      <Route path="/Product" element={<Product/>} />
-      <Route path="/Servisi" element={<Servisi/>} />
-      <Route path="/SuportiKlientit" element={<SuportiKlientit/>}/>
-    </Routes>
-    <SpeedInsights/>
-    </div>
+    <CartProvider>
+      <div>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path="/Products" element={<Products/>} />
+          <Route path="/Product" element={<Product/>} />
+          <Route path="/Servisi" element={<Servisi/>} />
+          <Route path="/SuportiKlientit" element={<SuportiKlientit/>}/>
+        </Routes>
+        <SpeedInsights/>
+      </div>
+    </CartProvider>
   )
 }
 
